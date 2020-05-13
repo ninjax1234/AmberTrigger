@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200513版)" Enabled="true">
+  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200514版)" Enabled="true">
     <Folders>
       <Folder Id="a4573917-7a97-4b29-8eac-72264fcbe187" Name="狩猎触发器 (TTS)" Enabled="true">
         <Folders>
@@ -62,11 +62,9 @@
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="A级怪.$1" TextAuraFontSize="0" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -400,44 +398,28 @@
           </Folder>
           <Folder Id="e815fccf-a1db-4e75-816f-25e147275fe1" Name="技能提示/开怪提醒" Enabled="true">
             <Folders>
-              <Folder Id="4ffff310-9c76-40b6-9964-2bb4d6e08564" Name="礼问ET(不想用的话取消勾选或者移除)" Enabled="true">
+              <Folder Id="4ffff310-9c76-40b6-9964-2bb4d6e08564" Name="定时提醒" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="艾 符号监测" Id="5ddecc5d-f5dd-4f15-af2b-4e383acb80d0" RegularExpression="" RefirePeriodExpression="300">
+                  <Trigger Enabled="true" Sequential="True" Name="开怪倒计时 (测试版)" Id="b8e1485c-71ca-4947-96af-5b77f0a6e1c6" RegularExpression="(||ET)(.*?)?(?&lt;hour&gt;[0-9]|1[0-9]|2[0-3])(:|：| )(?&lt;minute&gt;[0-5][0-9])" PeriodRefire="Deny">
                     <Actions>
-                      <Action OrderNumber="1" MessageBoxIconType="Warning" MessageBoxText="队伍正在进行准备确认" PlaySoundFileExpression="准备" UseTTSTextExpression="准备" TextAuraFontSize="0" ActionType="UseTTS" RefireInterrupt="True">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="false" Name="ET" Id="7285e0f6-5fd9-4ea4-8a73-7ec1ff3d8a0d" RegularExpression="ET">
-                    <Actions>
-                      <Action OrderNumber="1" MessageBoxIconType="Warning" MessageBoxText="队伍正在进行准备确认" UseTTSTextExpression="ET" TextAuraFontSize="0" ActionType="UseTTS" RefireInterrupt="True">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="false" Name="开怪倒计时 (未完成)" Id="b8e1485c-71ca-4947-96af-5b77f0a6e1c6" RegularExpression="(||ET)(.*?)?(?&lt;hour&gt;[0-9]|1[0-9]|2[0-3])(:|：)(?&lt;minute&gt;[0-5][0-9])开?(开,)?( 提前一秒也是抢开)?" PrevActionsRefire="Deny" Scheduling="FromLastAction">
-                    <Actions>
-                      <Action OrderNumber="1" MessageBoxIconType="Warning" MessageBoxText="队伍正在进行准备确认" UseTTSTextExpression="ET" TextAuraFontSize="0" ActionType="UseTTS" RefireInterrupt="True">
+                      <Action OrderNumber="1" LogLevel="-1" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="Timerclock" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="2" LogLevel="-1" VariableName="countdown" VariableExpression="${hour}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="2" LogLevel="-1" VariableName="countdown" VariableExpression="${hour}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="ettime" VariableExpression="${hour}*60+${minute}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="ettime" VariableExpression="${hour}*60+${minute}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="hour" VariableExpression="${hour}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="hour" VariableExpression="${hour}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="minute" VariableExpression="${minute}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="minute" VariableExpression="${minute}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
@@ -461,18 +443,39 @@
                         <Condition Enabled="false" Grouping="Or" />
                         <Conditions />
                       </Action>
-                      <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/e ${var:countdown}" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson">
-                        <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
-                      </Action>
-                      <Action OrderNumber="11" LogLevel="-1" TextAuraAlignment="MiddleLeft" TextAuraEffect="Bold" TextAuraFontSize="14.25" TextAuraForeground="Red" TextAuraExpression="已定时: ET${var:hour}:${minute}&#xA;倒计时: ${numeric:round(${var:realcountdown}-${_sincems}/1000)}秒" TextAuraXIniExpression="628" TextAuraYIniExpression="246" TextAuraWIniExpression="222" TextAuraHIniExpression="62" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${var:realcountdown}*1000-${_sincems}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura" RefireRequeue="False">
-                        <Condition Enabled="true" Grouping="Or">
+                      <Action OrderNumber="10" LogLevel="-1" TextAuraAlignment="MiddleLeft" TextAuraEffect="Bold" TextAuraFontSize="14.25" TextAuraForeground="Red" TextAuraName="Timerclock" TextAuraExpression="已定时: ET${var:hour}:${minute}&#xA;倒计时: ${numeric:round(${var:realcountdown}-${_sincems}/1000)}秒" TextAuraXIniExpression="628" TextAuraYIniExpression="246" TextAuraWIniExpression="222" TextAuraHIniExpression="62" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${var:realcountdown}*1000-${_sincems}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura" ExecutionDelayExpression="1000" RefireRequeue="False">
+                        <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                          <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="301" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                         </Condition>
                         <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="开启ET提醒" Id="0217c723-55ad-4f0c-80d4-7a8465ede3ab" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0039:感觉到了强大的恶名精英的气息……">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="b8e1485c-71ca-4947-96af-5b77f0a6e1c6" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="关闭ET提醒" Id="f68f7a45-dafa-4d22-9730-4171e6d317e2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0039:进入了休息区。">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="Timerclock" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="b8e1485c-71ca-4947-96af-5b77f0a6e1c6" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -535,10 +538,10 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="e7d853c2-ca14-4ae7-91a5-b8843e868cfc" Name="FATE" Enabled="false">
+          <Folder Id="e7d853c2-ca14-4ae7-91a5-b8843e868cfc" Name="FATE" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Name="贝爷/女王/夜光花" Id="b67d8f91-27c7-4c1b-95b2-06a7c73cea3c" RegularExpression="没法跨服之前，在任意频道输入【重置设定】手动重置触发器，不然触发器无法正常使用Added new combatant (贝希摩斯|长须豹女王|夜光花).*?HP: (\d{7})">
+              <Trigger Enabled="true" Name="贝爷/女王/夜光花" Id="b67d8f91-27c7-4c1b-95b2-06a7c73cea3c" RegularExpression="没法跨服之前，在任意频道输入【重置设定】手动重置触发器，不然触发器无法正常使用Added new combatant (贝希摩斯|长须豹女王|夜光花).*?HP: (\d{7})">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="Fate, $1" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -546,7 +549,7 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="false" Name="雷马/狐狸" Id="10f8fe1c-2a4e-4bd8-b050-40aeda7174b4" RegularExpression="没法跨服之前，在任意频道输入【重置设定】手动重置触发器，不然触发器无法正常使用Added new combatant (伊克西翁|玉藻御前).*?HP: (\d{8})">
+              <Trigger Enabled="true" Name="雷马/狐狸" Id="10f8fe1c-2a4e-4bd8-b050-40aeda7174b4" RegularExpression="没法跨服之前，在任意频道输入【重置设定】手动重置触发器，不然触发器无法正常使用Added new combatant (伊克西翁|玉藻御前).*?HP: (\d{8})">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="Fate, $1" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -569,7 +572,7 @@
       </Folder>
       <Folder Id="a9a398d4-f9eb-4d2a-a65c-4d60861240dd" Name="摸鱼插件" Enabled="true">
         <Folders>
-          <Folder Id="cdad61f6-f304-421b-9ae1-9530c29a9bd0" Name="开怪玩家监视" Enabled="false">
+          <Folder Id="cdad61f6-f304-421b-9ae1-9530c29a9bd0" Name="开怪玩家监视" Enabled="true">
             <Folders>
               <Folder Id="70e7ed18-563b-43a2-885b-472f880e9a05" Name="开怪玩家监控-S怪 20191210" Enabled="true">
                 <Folders />
@@ -1114,7 +1117,6 @@
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="comp" VariableExpression="${comp}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
@@ -1217,11 +1219,9 @@
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="${monster}击杀" UseTTSRateExpression="5" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
-                  <Action OrderNumber="2" JsonEndpointExpression="https://xn--v9x.net/api/?tracker=hunt&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234&amp;at=false&amp;strict_zone=true&amp;verbose=true" JsonPayloadExpression="{&quot;monster&quot;:&quot;${monster}&quot;, &quot;zone&quot;:&quot;${_zone}${var:zone}&quot;, &quot;time&quot;: &quot;${_timestamp}&quot;, &quot;worldid&quot;: &quot;${_ffxivparty[1].currentworldid}&quot;}" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="GenericJson">
+                  <Action OrderNumber="2" JsonEndpointExpression="https://xn--v9x.net/api/?tracker=hunt&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234&amp;at=false&amp;strict_zone=true&amp;verbose=false" JsonPayloadExpression="{&quot;monster&quot;:&quot;${monster}&quot;, &quot;zone&quot;:&quot;${_zone}${var:zone}&quot;, &quot;time&quot;: &quot;${_timestamp}&quot;, &quot;worldid&quot;: &quot;${_ffxivparty[1].currentworldid}&quot;}" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="GenericJson">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
