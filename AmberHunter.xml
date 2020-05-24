@@ -6,10 +6,10 @@
         <Folders>
           <Folder Id="dcbabfca-cb44-43bd-b49f-39c86fea0caa" Name="狩猎怪报警" Enabled="true">
             <Folders>
-              <Folder Id="ca6c47dc-1a08-4692-a3c4-68fd8b3c463e" Name="S怪" Enabled="true">
+              <Folder Id="ca6c47dc-1a08-4692-a3c4-68fd8b3c463e" Name="S怪" Enabled="false">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="4.0 S怪" Id="0825b540-8fb2-41fa-9eab-78264b2a3679" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (伽马|巨大鳐|盐和光|兀鲁忽乃朝鲁|爬骨怪龙|优昙婆罗花).*?Level: 70.*?HP: (\d{8})" PeriodRefire="Deny" RefirePeriodExpression="1*60*1000">
+                  <Trigger Enabled="true" Name="4.0 S怪" Id="0825b540-8fb2-41fa-9eab-78264b2a3679" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (伽马|巨大鳐|盐和光|兀鲁忽乃朝鲁|爬骨怪龙|优昙婆罗花).*?Level: 70.*?HP: (\d{8})" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
@@ -20,35 +20,41 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Name="2.0 S怪" Id="1ca30923-697c-429f-bd36-47e3e6a762ba" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特|阿格里帕).*?Level: 50.*?HP: (\d{7})" PeriodRefire="Deny" RefirePeriodExpression="1*60*1000">
+                  <Trigger Enabled="true" Name="2.0 S怪" Id="1ca30923-697c-429f-bd36-47e3e6a762ba" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特|阿格里帕).*?Level: 50.*?HP: (\d{7})" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="S级怪.$1" TextAuraFontSize="0" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Name="3.0 S怪" Id="fb724f4b-e1d0-4ac8-9182-b30cf185e0e4" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|凯撒贝希摩斯|极乐鸟).*?Level: 60.*?HP: (\d{7})" PeriodRefire="Deny" RefirePeriodExpression="1*60*1000">
+                  <Trigger Enabled="true" Name="3.0 S怪" Id="fb724f4b-e1d0-4ac8-9182-b30cf185e0e4" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|凯撒贝希摩斯|极乐鸟).*?Level: 60.*?HP: (\d{7})" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="S级怪.$1" TextAuraFontSize="0" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Name="5.0 S怪" Id="e9ddd076-a712-47f6-bbd8-44307313d543" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (戾虫|得到宽恕的炫学|多智兽|阿格拉俄珀|伊休妲|顾尼图).*?Level: 80.*?HP: (\d{8})">
+                  <Trigger Enabled="true" Name="5.0 S怪" Id="e9ddd076-a712-47f6-bbd8-44307313d543" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (戾虫|得到宽恕的炫学|多智兽|阿格拉俄珀|伊休妲|顾尼图).*?Level: 80.*?HP: (\d{8})" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" UseTTSTextExpression="S级怪.$1" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -447,10 +453,11 @@
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现" PeriodRefire="Deny" RefirePeriodExpression="6*1000">
+              <Trigger Enabled="false" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
@@ -835,7 +842,7 @@
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/sh   ${var:newString}准时开餐！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                  <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/sh   ${var:newString}准时开餐！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -872,15 +879,19 @@
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map1" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" LogLevel="-1" VariableName="fixET" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="3ed3d2b9-7245-45f6-953d-a4081846a2b1" ActionType="Trigger" ExecutionDelayExpression="5000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="9b2308a9-40ec-4a05-b1e5-c2e0866d0512" ActionType="Trigger" ExecutionDelayExpression="5000">
+                  <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="9b2308a9-40ec-4a05-b1e5-c2e0866d0512" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
@@ -1281,7 +1292,7 @@
           <Folder Id="52f140d9-103d-4e61-ae7d-399bd1af081e" Name="发现猎物报群" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Sequential="True" Name="旧S" Id="fbd8950c-5adb-4a8d-bcaf-6bacffcaa361" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
+              <Trigger Enabled="true" Name="旧S" Id="fbd8950c-5adb-4a8d-bcaf-6bacffcaa361" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1299,7 +1310,7 @@
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
-                  <Action OrderNumber="5" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234" DiscordWebhookMessage="${var:world}, ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="6*1000" Asynchronous="False">
+                  <Action OrderNumber="5" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234" DiscordWebhookMessage="${var:world}, ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="4*1000">
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Action>
@@ -1308,35 +1319,42 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Name="新S" Id="a0c3eeaf-fc7c-4bca-b213-fa41e70d621c" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|伊休妲|顾尼图|戾虫).*?HP: (\d{8}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
+              <Trigger Enabled="true" Name="新S" Id="a0c3eeaf-fc7c-4bca-b213-fa41e70d621c" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|伊休妲|顾尼图|戾虫).*?HP: (\d{8}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="5" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234" DiscordWebhookMessage="${var:world}, ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="6*1000" Asynchronous="False">
+                  <Action OrderNumber="5" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234" DiscordWebhookMessage="${var:world}, ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="4*1000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Name="SS" Id="008c7709-36e3-429e-b69e-c0566a923d06" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的叛乱).*?HP: (\d{9})" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
+              <Trigger Enabled="true" Name="SS" Id="008c7709-36e3-429e-b69e-c0566a923d06" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的叛乱).*?HP: (\d{9})">
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="2" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234" DiscordWebhookMessage="哒哒哒！在${var:world}的 ${var:map}居然出现了 ${monster}！真是哒哒哒哒！✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="6*1000">
+                  <Action OrderNumber="2" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=1234" DiscordWebhookMessage="哒哒哒！在${var:world}的 ${var:map}居然出现了 ${monster}！真是哒哒哒哒！✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="4*1000">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="And">
