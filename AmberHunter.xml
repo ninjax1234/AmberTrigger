@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200522版)" Enabled="true">
+  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200523版)" Enabled="true">
     <Folders>
       <Folder Id="a4573917-7a97-4b29-8eac-72264fcbe187" Name="狩猎触发器 (TTS)" Enabled="true">
         <Folders>
           <Folder Id="dcbabfca-cb44-43bd-b49f-39c86fea0caa" Name="狩猎怪报警" Enabled="true">
             <Folders>
-              <Folder Id="ca6c47dc-1a08-4692-a3c4-68fd8b3c463e" Name="S怪" Enabled="false">
+              <Folder Id="ca6c47dc-1a08-4692-a3c4-68fd8b3c463e" Name="S怪" Enabled="true">
                 <Folders />
                 <Triggers>
                   <Trigger Enabled="true" Name="4.0 S怪" Id="0825b540-8fb2-41fa-9eab-78264b2a3679" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (伽马|巨大鳐|盐和光|兀鲁忽乃朝鲁|爬骨怪龙|优昙婆罗花).*?Level: 70.*?HP: (\d{8})" PeriodRefire="Deny" RefirePeriodExpression="60*1000">
@@ -110,7 +110,7 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="ffaae7a9-3212-49e1-8859-075d6a98b627" Name="B怪" Enabled="false">
+              <Folder Id="ffaae7a9-3212-49e1-8859-075d6a98b627" Name="B怪" Enabled="true">
                 <Folders>
                   <Folder Id="b780cda6-1ba0-4590-8f27-c708599ed91f" Name="5.0 B怪" Enabled="false">
                     <Folders>
@@ -250,13 +250,15 @@
                       <Folder ZoneFilterEnabled="True" Id="1f7cb14f-4e89-4949-9e01-2caf86cf4a7a" ZoneFilterRegularExpression="库尔札斯西部高地" Name="库尔札斯西部高地" Enabled="true">
                         <Folders />
                         <Triggers>
-                          <Trigger Enabled="true" Name="阿尔提克/克鲁泽" Id="0aa8f74f-d03b-435d-baa2-db896042e0d3" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (阿尔提克|克鲁泽).*?Level: 60.*?HP: (\d{6})" RefirePeriodExpression="6*1000">
+                          <Trigger Enabled="true" Name="阿尔提克/克鲁泽" Id="0aa8f74f-d03b-435d-baa2-db896042e0d3" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (阿尔提克|克鲁泽).*?Level: 60.*?HP: (\d{5})" RefirePeriodExpression="6*1000">
                             <Actions>
                               <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                                 <Condition Enabled="false" Grouping="Or" />
+                                <Conditions />
                               </Action>
                               <Action OrderNumber="2" UseTTSTextExpression="B级怪.$1" UseTTSExclusive="False" TextAuraFontSize="0" ActionType="UseTTS">
                                 <Condition Enabled="false" Grouping="Or" />
+                                <Conditions />
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
@@ -453,7 +455,7 @@
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="false" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
