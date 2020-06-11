@@ -811,7 +811,7 @@
                     <Conditions />
                   </Action>
                 </Actions>
-                <Condition Enabled="false" Grouping="Or">
+                <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${hour}*60+${minute}" ExpressionTypeL="Numeric" ExpressionR="${var:ettime}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
               </Trigger>
