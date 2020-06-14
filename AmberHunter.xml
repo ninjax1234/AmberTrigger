@@ -491,7 +491,7 @@
       </Folder>
       <Folder Id="a9a398d4-f9eb-4d2a-a65c-4d60861240dd" Name="摸鱼插件" Enabled="true">
         <Folders>
-          <Folder Id="cdad61f6-f304-421b-9ae1-9530c29a9bd0" Name="开怪玩家监视" Enabled="false">
+          <Folder Id="cdad61f6-f304-421b-9ae1-9530c29a9bd0" Name="开怪玩家监视" Enabled="true">
             <Folders>
               <Folder Id="70e7ed18-563b-43a2-885b-472f880e9a05" Name="开怪玩家监控-S怪 20191210" Enabled="true">
                 <Folders />
