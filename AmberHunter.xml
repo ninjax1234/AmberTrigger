@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (2007022v4版)" Enabled="true">
+  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (2007022v5版)" Enabled="true">
     <Folders>
       <Folder Id="a4573917-7a97-4b29-8eac-72264fcbe187" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
@@ -328,15 +328,12 @@
                             <Actions>
                               <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Action>
                               <Action OrderNumber="2" UseTTSTextExpression="B级怪.$1" UseTTSExclusive="False" TextAuraFontSize="0" ActionType="UseTTS">
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -495,14 +492,6 @@
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
               </Trigger>
-              <Trigger Enabled="true" Name="古塔尼亚/畏惧装甲 (不接近Fate无法触发, 作废)" Id="c415988d-ed2d-4fcd-a7ff-fd3d09aa390a" RegularExpression="Added new combatant (古塔尼亚|畏惧装甲).*?HP: (\d{9})">
-                <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="Fate, $1" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
             </Triggers>
           </Folder>
         </Folders>
@@ -519,30 +508,36 @@
                     <Actions>
                       <Action OrderNumber="1" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2192131110&amp;token=cola13624651&amp;group=811848351" DiscordWebhookMessage="${var:guaiming}   ${hp}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="DiscordWebhook">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetString" VariableName="kaiguaijilu" VariableExpression="${guaiming}&#xD;${time}${wanjiaming} ${jinengming}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Not">
                           <ConditionSingle Enabled="true" ExpressionL="${var:guaiming}" ExpressionTypeL="String" ExpressionR="${guaiming}" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" VariableOp="SetString" VariableName="kaiguaijilu" VariableExpression="${var:kaiguaijilu}&#xD;${time}${wanjiaming} ${jinengming}" TextAuraFontSize="9" TextAuraFontName="??" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" VariableOp="SetString" VariableName="guaiming" VariableExpression="${guaiming}" TextAuraFontSize="9" TextAuraName="guaiming" TextAuraFontName="宋体" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="5" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Aqua" TextAuraOutline="#0080FF" TextAuraName="kaiguaiwanjia" TextAuraExpression="${var:kaiguaijilu}" TextAuraXIniExpression="1000" TextAuraYIniExpression="50" TextAuraWIniExpression="300" TextAuraHIniExpression="900" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" Enabled="False" ActionType="TextAura">
+                      <Action OrderNumber="5" TextAuraAlignment="TopLeft" TextAuraEffect="Bold" TextAuraFontSize="12" TextAuraForeground="Aqua" TextAuraOutline="#0080FF" TextAuraName="kaiguaiwanjia" TextAuraExpression="${var:kaiguaijilu}" TextAuraXIniExpression="1000" TextAuraYIniExpression="50" TextAuraWIniExpression="300" TextAuraHIniExpression="900" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" ActionType="TextAura">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1a64867b-3c23-4019-80c9-316581b4331b" TriggerForce="regexp" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="60000">
+                      <Action OrderNumber="6" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1a64867b-3c23-4019-80c9-316581b4331b" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="60000">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${hp1}" ExpressionTypeL="Numeric" ExpressionR="${hp2}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="false" Name="游戏对话框输入【/e 开怪字幕关】关闭字幕" Id="1a64867b-3c23-4019-80c9-316581b4331b" RegularExpression="0038:开怪字幕关">
+                  <Trigger Enabled="true" Name="游戏对话框输入【/e 开怪字幕关】关闭字幕" Id="1a64867b-3c23-4019-80c9-316581b4331b" RegularExpression="0038:开怪字幕关">
                     <Actions>
                       <Action OrderNumber="1" TextAuraOp="DeactivateAura" TextAuraFontSize="9" TextAuraName="kaiguaiwanjia" TextAuraFontName="宋体" ActionType="TextAura">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1437,7 +1432,7 @@
       <Folder Id="1211d23a-32e7-4af5-b577-ea86ad3b4e4a" Name="方法" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="感觉到了强大的恶名精英的气息" Id="c9ceec96-ef28-4e49-94bf-fd3952f2913f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0039:感觉到了强大的恶名精英的气息……">
+          <Trigger Enabled="true" Name="感觉到了强大的恶名精英的气息" Id="c9ceec96-ef28-4e49-94bf-fd3952f2913f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0039:感觉到了强大的恶名精英的气息……|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|顾尼图|戾虫|伊休妲).*?HP: (\d{8}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map1" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1492,7 +1487,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:map1}" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="当前区服" Id="8e466de6-d4d3-41c5-b99a-738aa1cb3dc7" RegularExpression="0003:欢迎来到艾欧泽亚！|0039:使用跨界传送移动到了(?&lt;world&gt;(.*))。|0039:进入了休息区。">
+          <Trigger Enabled="true" Sequential="True" Name="当前区服" Id="8e466de6-d4d3-41c5-b99a-738aa1cb3dc7" RegularExpression="0003:欢迎来到艾欧泽亚！|0039:使用跨界传送移动到了(?&lt;world&gt;(.*))。|0039:进入了休息区。|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|顾尼图|戾虫|伊休妲).*?HP: (\d{8}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map1" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
