@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (2007022v5版)" Enabled="true">
+  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200831v1版)" Enabled="true">
     <Folders>
       <Folder Id="a4573917-7a97-4b29-8eac-72264fcbe187" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
@@ -462,16 +462,7 @@
                 </Triggers>
               </Folder>
             </Folders>
-            <Triggers>
-              <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
-                <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-              </Trigger>
-            </Triggers>
+            <Triggers />
           </Folder>
           <Folder Id="e7d853c2-ca14-4ae7-91a5-b8843e868cfc" Name="FATE" Enabled="false">
             <Folders />
@@ -495,7 +486,17 @@
             </Triggers>
           </Folder>
         </Folders>
-        <Triggers />
+        <Triggers>
+          <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现|\bssssss\b|\bSSSSSS\b" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
       </Folder>
       <Folder Id="a9a398d4-f9eb-4d2a-a65c-4d60861240dd" Name="摸鱼插件" Enabled="true">
         <Folders>
@@ -825,7 +826,7 @@
                   <Action OrderNumber="8" LogLevel="-1" VariableOp="SetString" VariableName="fixET" VariableExpression="true" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/sh   ${var:newString}准时开餐！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson" Asynchronous="False">
+                  <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/sh   ${var:newString}准时开餐！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/y   ${var:newString}准时开餐！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
@@ -1432,7 +1433,7 @@
       <Folder Id="1211d23a-32e7-4af5-b577-ea86ad3b4e4a" Name="方法" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="感觉到了强大的恶名精英的气息" Id="c9ceec96-ef28-4e49-94bf-fd3952f2913f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0039:感觉到了强大的恶名精英的气息……|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|顾尼图|戾虫|伊休妲).*?HP: (\d{8}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
+          <Trigger Enabled="true" Name="感觉到了强大的恶名精英的气息" Id="c9ceec96-ef28-4e49-94bf-fd3952f2913f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0039:感觉到了强大的恶名精英的气息……|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|顾尼图|戾虫|伊休妲).*?HP: (\d{8})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map1" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1487,7 +1488,7 @@
               <ConditionSingle Enabled="true" ExpressionL="${var:map1}" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="当前区服" Id="8e466de6-d4d3-41c5-b99a-738aa1cb3dc7" RegularExpression="0003:欢迎来到艾欧泽亚！|0039:使用跨界传送移动到了(?&lt;world&gt;(.*))。|0039:进入了休息区。|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|顾尼图|戾虫|伊休妲).*?HP: (\d{8}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
+          <Trigger Enabled="true" Sequential="True" Name="当前区服" Id="8e466de6-d4d3-41c5-b99a-738aa1cb3dc7" RegularExpression="0003:欢迎来到艾欧泽亚！|0039:使用跨界传送移动到了(?&lt;world&gt;(.*))。|0039:进入了休息区。|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)|^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|顾尼图|戾虫|伊休妲).*?HP: (\d{8})">
             <Actions>
               <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map1" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
