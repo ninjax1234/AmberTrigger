@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200831v1版)" Enabled="true">
+  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200831v2版)" Enabled="true">
     <Folders>
       <Folder Id="a4573917-7a97-4b29-8eac-72264fcbe187" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
@@ -487,7 +487,7 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现|\bssssss\b|\bSSSSSS\b" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+          <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现|sssss|SSSSS" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
