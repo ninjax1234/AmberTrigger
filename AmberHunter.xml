@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200831v2版)" Enabled="true">
+  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200831v3版)" Enabled="true">
     <Folders>
       <Folder Id="a4573917-7a97-4b29-8eac-72264fcbe187" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
@@ -487,9 +487,13 @@
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="SSS出现|sssss|SSSSS" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+          <Trigger Enabled="true" Name="醒一醒，S都要凉啦" Id="33528186-c0ee-4053-9af1-aa374585be8f" RegularExpression="(00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):(.*?)(SSS出现|sssss|SSSSS)" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+              <Action OrderNumber="1" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=948571182&amp;qq=2892927698&amp;token=1234" DiscordWebhookMessage="${_event}" JsonPayloadExpression="测试" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="DiscordWebhook">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Action>
