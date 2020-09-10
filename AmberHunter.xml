@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200906v1版)" Enabled="true">
+  <ExportedFolder Id="851f610b-5e47-4d0f-ad01-1891cc5e59cc" Name="琥珀原S触发器 (200910v1版)" Enabled="true">
     <Folders>
       <Folder Id="a4573917-7a97-4b29-8eac-72264fcbe187" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
@@ -792,11 +792,16 @@
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
+                  <Trigger Enabled="true" Name="9. &lt;new&gt;闷怪期定时，定时宏后面加个闷子，例子：/e 定时1分钟闷" Id="eb0a9d8f-9b47-45d9-9af7-45b4dedd366e" RegularExpression="">
+                    <Actions />
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="false" Name="定时" Id="3ed3d2b9-7245-45f6-953d-a4081846a2b1" RegularExpression="0038:定时(?&lt;fenzhong&gt;.*)分钟">
+              <Trigger Enabled="true" Name="定时" Id="3ed3d2b9-7245-45f6-953d-a4081846a2b1" RegularExpression="0038:定时(?&lt;fenzhong&gt;.*)分钟(?&lt;men&gt;闷)?">
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" VariableOp="UnsetRegex" VariableName="newETh|newETm|newETmin|currentETmin" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -837,7 +842,9 @@
                     <Conditions />
                   </Action>
                   <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/sh   ${var:newString}准时开餐！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
-                    <Condition Enabled="false" Grouping="Or" />
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${men}" ExpressionTypeL="String" ExpressionR="闷" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
                     <Conditions />
                   </Action>
                   <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/y   ${var:newString}准时开餐！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
@@ -853,7 +860,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid)}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="false" Name="重新定时" Id="9b2308a9-40ec-4a05-b1e5-c2e0866d0512" RegularExpression="0038:重新定时(?&lt;retime&gt;.*)分钟">
+              <Trigger Enabled="true" Name="重新定时" Id="9b2308a9-40ec-4a05-b1e5-c2e0866d0512" RegularExpression="0038:重新定时(?&lt;retime&gt;.*)分钟">
                 <Actions>
                   <Action OrderNumber="1" LogLevel="-1" VariableName="fixET" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -869,7 +876,7 @@
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="05242d21-4806-4b20-8542-3c0da1bea40d" Name="Fate监控报贝 (需鲶鱼精邮差) (未完成)" Enabled="false">
+          <Folder Id="05242d21-4806-4b20-8542-3c0da1bea40d" Name="Fate监控报贝 (需鲶鱼精邮差) (未完成，需要手动编辑跨服贝号才能食用)" Enabled="false">
             <Folders>
               <Folder ZoneFilterEnabled="True" Id="18c328f0-291b-40f3-a781-d93b40e548aa" ZoneFilterRegularExpression="太阳神草原" Name="石板妹妹" Enabled="false">
                 <Folders />
@@ -894,9 +901,11 @@
                     <Actions>
                       <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl3 土——土元精！！！快醒醒，出FATE啦！！&lt;pos&gt;是《核心危机》！！！" LogLevel="-1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" LogLevel="-1" TextAuraEffect="Bold" TextAuraFontSize="26.25" TextAuraForeground="#8000FF" TextAuraOutline="Aqua" TextAuraName="beisa3" TextAuraExpression="${_event}" TextAuraXIniExpression="336" TextAuraYIniExpression="151" TextAuraWIniExpression="1319" TextAuraHIniExpression="164" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="华文细黑" Enabled="False" ActionType="TextAura">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -921,6 +930,61 @@
               </Folder>
             </Folders>
             <Triggers />
+          </Folder>
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="131072" ZoneFilterEnabled="True" Id="b4deaf53-0d3b-440b-a37a-1d49ebb32cc7" ZoneFilterRegularExpression="西萨纳兰|黑衣森林北部林区" Name="捕鱼人辅助器 (需鲶鱼精邮差，请慎重使用)" Enabled="false">
+            <Folders>
+              <Folder Id="bcd05639-4b9c-4c76-a94a-2daca64471e5" Name="使用说明" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="1. 此为半自动辅助器，需手动抛竿后，才开始自动驾驶。" Id="27a5baaa-9bea-48b0-bedd-722dabcd0f54" RegularExpression="">
+                    <Actions />
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="2. 鱼王杆时，必须手动提竿，成功提竿后，结束自动驾驶。" Id="0504dcb3-b867-4d22-9dc3-bc741e97c29f" RegularExpression="">
+                    <Actions />
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="3. 重复手动抛竿启动自动驾驶" Id="ed9209c9-b873-462a-a671-e99ab40f40e1" RegularExpression="">
+                    <Actions />
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="4. 请谨慎使用，长时间无操作，会出现在离开状态下钓鱼，请关闭自动切换离开状态，或开启忙碌状态" Id="88556051-c4c9-4a36-9ccb-453427281bd3" RegularExpression="">
+                    <Actions />
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="自动循环撒饵抛竿" Id="9d0b43f2-1f9f-46c4-9b60-451974bf6621" RegularExpression="00:08c3:不经意间鱼饵被吃掉了……|00:08c3:上钩的鱼逃走了……|00:08c3:不经意间雉鸡拟饵不见了……">
+                <Actions>
+                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/ac 撒饵" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="500">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].currentgp}" ExpressionTypeL="Numeric" ExpressionR="300" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/ac 抛竿" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="500">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].currentgp}" ExpressionTypeL="Numeric" ExpressionR="300" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/ac 抛竿" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="3000">
+                    <Condition Enabled="false" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:fishfast}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
           </Folder>
         </Folders>
         <Triggers />
