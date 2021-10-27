@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="e0f15d3c-a9bb-46ae-8afb-b3b66e76dd9f" Name="琥珀原S触发器 (211026a版)" Enabled="true">
+  <ExportedFolder Id="e0f15d3c-a9bb-46ae-8afb-b3b66e76dd9f" Name="琥珀原S触发器 (211026b版)" Enabled="true">
     <Folders>
       <Folder Id="183eeab1-3796-41d7-848d-e9500b248c7c" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
@@ -513,11 +513,11 @@
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
                   </Trigger>
-                  <Trigger Enabled="true" Name="全部" Id="7aa1fdec-720c-4703-95f0-51bfa4efbf05" RegularExpression="(00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):(.*?)((SSS出现|sssss|SSSSS)(.*?)((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))|((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)((SSS出现|sssss|SSSSS))(.*?))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+                  <Trigger Enabled="true" Name="全部" Id="7aa1fdec-720c-4703-95f0-51bfa4efbf05" RegularExpression="(00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):(.*?)((SSS出现|SSSSS|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))|((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)((SSS出现|SSSSS|sssss))(.*?))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="中拉诺西亚|拉诺西亚低地|东拉诺西亚|西拉诺西亚|拉诺西亚高地|拉诺西亚外地|黑衣森林中央林区|黑衣森林东部林区|黑衣森林南部林区|黑衣森林北部林区|西萨纳兰|中萨纳兰|东萨纳兰|南萨纳兰|北萨纳兰|库尔扎斯中央高地|摩杜纳|库尔扎斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海|基拉巴尼亚边区|基拉巴尼亚山区|基拉巴尼亚湖区|红玉海|延夏|太阳神草原|雷克兰德|珂露西亚岛|安穆·艾兰|伊尔美格|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                          <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="中拉诺西亚|拉诺西亚低地|东拉诺西亚|西拉诺西亚|拉诺西亚高地|拉诺西亚外地|黑衣森林中央林区|黑衣森林东部林区|黑衣森林南部林区|黑衣森林北部林区|西萨纳兰|中萨纳兰|东萨纳兰|南萨纳兰|北萨纳兰|库尔札斯中央高地|摩杜纳|库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海|基拉巴尼亚边区|基拉巴尼亚山区|基拉巴尼亚湖区|红玉海|延夏|太阳神草原|雷克兰德|珂露西亚岛|安穆·艾兰|伊尔美格|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
                         <Conditions />
                       </Action>
