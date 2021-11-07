@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="e0f15d3c-a9bb-46ae-8afb-b3b66e76dd9f" Name="琥珀原S触发器 (211026c版)" Enabled="true">
+  <ExportedFolder Id="e0f15d3c-a9bb-46ae-8afb-b3b66e76dd9f" Name="琥珀原S触发器 (211105b版)" Enabled="true">
     <Folders>
       <Folder Id="183eeab1-3796-41d7-848d-e9500b248c7c" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
@@ -308,9 +308,9 @@
                       <Folder ZoneFilterEnabled="True" Id="4fdacb34-388a-4da1-8539-5607f82abb57" ZoneFilterRegularExpression="伊尔美格" Name="伊尔美格" Enabled="true">
                         <Folders />
                         <Triggers>
-                          <Trigger Enabled="true" Name="狐首虺/杜莫伊" Id="b1747ab1-a8b7-4ead-bcf3-9c004d37cedd" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (狐首虺|杜莫伊).*?Level: 80.*?HP: (\d{6})" RefirePeriodExpression="6*1000">
+                          <Trigger Enabled="true" Name="狐首虺/杜莫伊" Id="b1747ab1-a8b7-4ead-bcf3-9c004d37cedd" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (狐首虺|杜莫伊).*?Level: 80.*?HP: (\d{6}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)" RefirePeriodExpression="6*1000">
                             <Actions>
-                              <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
+                              <Action OrderNumber="1" LogMessageText="${_event}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                                 <Condition Enabled="false" Grouping="Or" />
                               </Action>
                               <Action OrderNumber="2" UseTTSTextExpression="B级怪.$1" UseTTSExclusive="False" TextAuraFontSize="0" ActionType="UseTTS">
@@ -412,7 +412,7 @@
             </Folders>
             <Triggers />
           </Folder>
-          <Folder Id="cb5f3011-a604-4d51-9832-8167e66f97c6" Name="技能提示" Enabled="true">
+          <Folder Id="cb5f3011-a604-4d51-9832-8167e66f97c6" Name="技能提示" Enabled="false">
             <Folders>
               <Folder ZoneFilterEnabled="True" Id="b10a4ecc-6dfb-4a90-ac7e-714abb3b87ef" ZoneFilterRegularExpression="黑风海" Name="顾尼图" Enabled="false">
                 <Folders />
@@ -458,71 +458,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-            </Folders>
-            <Triggers />
-          </Folder>
-          <Folder Id="71e4a52e-6d97-44b9-975a-bb5c50c69335" Name="超级SSSSS" Enabled="true">
-            <Folders>
-              <Folder Id="c4e5a594-6a3f-4eb6-a47c-989c37eb7bbc" Name="选项 (点击一次启动选项)" Enabled="true">
-                <Folders />
-                <Triggers>
-                  <Trigger Enabled="false" Name="只播报5S" Id="686519d7-be92-4d99-9d25-190c1c00ccf7" RegularExpression="^.">
-                    <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="dea74f38-6e21-4368-a1b4-b1a22e5c75ab" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="7aa1fdec-720c-4703-95f0-51bfa4efbf05" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="686519d7-be92-4d99-9d25-190c1c00ccf7" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="false" Name="全部播报" Id="a30b2863-9fb9-4269-beb0-95f4d5161d29" RegularExpression="^.">
-                    <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="7aa1fdec-720c-4703-95f0-51bfa4efbf05" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="dea74f38-6e21-4368-a1b4-b1a22e5c75ab" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="a30b2863-9fb9-4269-beb0-95f4d5161d29" ActionType="Trigger">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-              <Folder Id="45311960-d819-421d-bbf8-7e4679fea078" Name="大喇叭 (↓↓↓↓下方设置↓↓↓↓)" Enabled="true">
-                <Folders />
-                <Triggers>
-                  <Trigger Enabled="false" Name="5.0" Id="dea74f38-6e21-4368-a1b4-b1a22e5c75ab" RegularExpression="(00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):(.*?)((?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))|((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)((?i)(SSS出现|sssss))(.*?))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
-                    <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="醒一醒，5S快要凉了" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="雷克兰德|珂露西亚岛|安穆·艾兰|伊尔美格|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                        </Condition>
-                        <Conditions />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Trigger>
-                  <Trigger Enabled="true" Name="全部" Id="7aa1fdec-720c-4703-95f0-51bfa4efbf05" RegularExpression="(00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):(.*?)((?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))|((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)((?i)(SSS出现|sssss))(.*?))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
-                    <Actions>
-                      <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
-                        <Condition Enabled="true" Grouping="And">
-                          <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="中拉诺西亚|拉诺西亚低地|东拉诺西亚|西拉诺西亚|拉诺西亚高地|拉诺西亚外地|黑衣森林中央林区|黑衣森林东部林区|黑衣森林南部林区|黑衣森林北部林区|西萨纳兰|中萨纳兰|东萨纳兰|南萨纳兰|北萨纳兰|库尔札斯中央高地|摩杜纳|库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海|基拉巴尼亚边区|基拉巴尼亚山区|基拉巴尼亚湖区|红玉海|延夏|太阳神草原|雷克兰德|珂露西亚岛|安穆·艾兰|伊尔美格|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                        </Condition>
-                        <Conditions />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="Or" />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -646,7 +581,7 @@
                       </ConditionGroup>
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="关闭挂机模式" Id="a896e95d-3f1f-4e73-b7a9-f50bf4fd87a4" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0038:挂机报贝 (?&lt;cwl&gt;[1-8]{1})">
+                  <Trigger Enabled="true" Name="关闭挂机模式" Id="a896e95d-3f1f-4e73-b7a9-f50bf4fd87a4" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0038:挂机报贝(?&lt;autopos&gt;d)? (?&lt;cwl&gt;[1-8]{1})">
                     <Actions>
                       <Action OrderNumber="1" FolderOp="DisableFolder" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="9656622e-240e-402b-b716-0cbf8f32dfad" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
@@ -656,7 +591,32 @@
                           <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" LogLevel="-1" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="Red" TextAuraName="autoflagtxt" TextAuraExpression="已关闭挂机模式" TextAuraXIniExpression="565" TextAuraYIniExpression="444" TextAuraWIniExpression="204" TextAuraHIniExpression="47" TextAuraOIniExpression="100" TextAuraTTLTickExpression="1500-${_sincems}" TextAuraFontName="Microsoft YaHei UI" TriggerId="c2c54293-7039-45ac-bb28-2f6626c7fc18" TriggerText="Souma_Subtitle:开:3:0:0:main" ActionType="TextAura" Asynchronous="False">
+                      <Action OrderNumber="3" LogLevel="-1" VariableName="autopos" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" VariableName="cwl" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" LogLevel="-1" VariableName="cwl2" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="6" LogLevel="-1" VariableName="cwl3" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" LogLevel="-1" VariableName="done" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="8" LogLevel="-1" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="Red" TextAuraName="autoflagtxt" TextAuraExpression="已关闭挂机模式" TextAuraXIniExpression="565" TextAuraYIniExpression="444" TextAuraWIniExpression="204" TextAuraHIniExpression="47" TextAuraOIniExpression="100" TextAuraTTLTickExpression="1500-${_sincems}" TextAuraFontName="Microsoft YaHei UI" TriggerId="c2c54293-7039-45ac-bb28-2f6626c7fc18" TriggerText="Souma_Subtitle:开:3:0:0:main" ActionType="TextAura" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -664,36 +624,39 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
                   </Trigger>
-                  <Trigger Enabled="true" Name="启动挂机模式" Id="038c5971-ba0c-4858-9f09-4747a2a21326" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0038:挂机报贝 (?&lt;cwl&gt;[1-8]{1})( (?&lt;cwl2&gt;[1-8]{1}))?( (?&lt;cwl3&gt;[1-8]{1}))?">
+                  <Trigger Enabled="true" Name="启动挂机模式" Id="038c5971-ba0c-4858-9f09-4747a2a21326" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 00:0038:挂机报贝(?&lt;autopos&gt;d)? (?&lt;cwl&gt;[1-8]{1})( (?&lt;cwl2&gt;[1-8]{1}))?( (?&lt;cwl3&gt;[1-8]{1}))?">
                     <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="cwl" VariableExpression="${cwl}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="autopos" VariableExpression="${autopos}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="cwl2" VariableExpression="${cwl2}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="cwl" VariableExpression="${cwl}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetString" VariableName="cwl3" VariableExpression="${cwl3}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="3" LogLevel="-1" VariableOp="SetString" VariableName="cwl2" VariableExpression="${cwl2}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" LogLevel="-1" VariableName="cwl3" VariableExpression="${cwl}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="4" LogLevel="-1" VariableOp="SetString" VariableName="cwl3" VariableExpression="${cwl3}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" LogLevel="-1" VariableName="cwl3" VariableExpression="${cwl}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:cwl3}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="5" LogLevel="-1" VariableName="cwl2" VariableExpression="${cwl}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="6" LogLevel="-1" VariableName="cwl2" VariableExpression="${cwl}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:cwl2}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="6" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="9656622e-240e-402b-b716-0cbf8f32dfad" ActionType="Trigger">
+                      <Action OrderNumber="7" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="9656622e-240e-402b-b716-0cbf8f32dfad" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="7" LogLevel="-1" VariableOp="SetString" VariableName="autoflag" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                      <Action OrderNumber="8" LogLevel="-1" VariableOp="SetString" VariableName="autoflag" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="8" LogLevel="-1" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="Red" TextAuraName="autoflagtxt" TextAuraExpression="已开启挂机模式" TextAuraXIniExpression="565" TextAuraYIniExpression="444" TextAuraWIniExpression="204" TextAuraHIniExpression="47" TextAuraOIniExpression="100" TextAuraTTLTickExpression="1500-${_sincems}" TextAuraFontName="Microsoft YaHei UI" TriggerId="c2c54293-7039-45ac-bb28-2f6626c7fc18" TriggerText="Souma_Subtitle:开:3:0:0:main" ActionType="TextAura" Asynchronous="False">
+                      <Action OrderNumber="9" LogLevel="-1" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="Red" TextAuraName="autoflagtxt" TextAuraExpression="已开启挂机模式" TextAuraXIniExpression="565" TextAuraYIniExpression="444" TextAuraWIniExpression="204" TextAuraHIniExpression="47" TextAuraOIniExpression="100" TextAuraTTLTickExpression="1500-${_sincems}" TextAuraFontName="Microsoft YaHei UI" TriggerId="c2c54293-7039-45ac-bb28-2f6626c7fc18" TriggerText="Souma_Subtitle:开:3:0:0:main" ActionType="TextAura" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -708,34 +671,74 @@
             <Triggers>
               <Trigger Enabled="false" Name="自动转发S" Id="9656622e-240e-402b-b716-0cbf8f32dfad" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;得到宽恕的炫学|多智兽|阿格拉俄珀|伊休妲|顾尼图|戾虫|巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
                 <Actions>
-                  <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                  <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl} 【挂机ing】【琥珀】&lt;pos&gt; SSSSSsssss，发现《${monster}》！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300">
+                  <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl2} 【挂机ing】【琥珀】&lt;pos&gt; SSSSSsssss，发现《${monster}》！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300">
+                  <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="3.0地图坐标偏移修正">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False" Description="3.0地图坐标偏移修正">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl} 【挂机ing】【琥珀】&lt;pos&gt; SSSSSsssss，发现《${monster}》！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autopos}" ExpressionTypeL="String" ExpressionR="d" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl2} 【挂机ing】【琥珀】&lt;pos&gt; SSSSSsssss，发现《${monster}》！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300" Asynchronous="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:cwl2}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autopos}" ExpressionTypeL="String" ExpressionR="d" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl3} 【挂机ing】【琥珀】&lt;pos&gt; SSSSSsssss，发现《${monster}》！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300">
+                  <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl3} 【挂机ing】【琥珀】&lt;pos&gt; SSSSSsssss，发现《${monster}》！" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300" Asynchronous="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:cwl3}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autopos}" ExpressionTypeL="String" ExpressionR="d" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
                   </Action>
+                  <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl} 【自动转发】【琥珀】${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ) 《${monster}》 SSSSSsssss" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300" Asynchronous="False" Description="卫月版1">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autopos}" ExpressionTypeL="String" ExpressionR="d" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl2} 【琥珀】${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ) 《${monster}》 SSSSSsssss" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300" Asynchronous="False" Description="卫月版2">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:cwl2}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autopos}" ExpressionTypeL="String" ExpressionR="d" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="11" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl${var:cwl3} 【琥珀】${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ) 《${monster}》 SSSSSsssss" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300" Asynchronous="False" Description="卫月版3">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:cwl3}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:autopos}" ExpressionTypeL="String" ExpressionR="d" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="12" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a896e95d-3f1f-4e73-b7a9-f50bf4fd87a4" TriggerText="[00:00:00.000] 00:0038:挂机报贝 1" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="Or">
+                <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Trigger>
@@ -1142,25 +1145,20 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="新S" Id="19372e03-958b-4cb7-8e75-ab34c33df588" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;伊休妲|得到宽恕的炫学|多智兽|阿格拉俄珀|顾尼图|戾虫).*?HP: (\d{8}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
                     <Actions>
-                      <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+                      <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/e  ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} )" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And">
@@ -1169,34 +1167,141 @@
                   </Trigger>
                   <Trigger Enabled="true" Name="旧S" Id="21371006-c90d-4c2b-8417-3935386cebd2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] 03:[0-9A-F]{8}:Added new combatant (?&lt;monster&gt;巨大鳐|爬骨怪龙|优昙婆罗花|兀鲁忽乃朝鲁|伽马|盐和光|凯撒贝希摩斯|刚德瑞瓦|神穆尔鸟|苍白骑士|卢克洛塔|极乐鸟|雷德罗巨蛇|护土精灵|蚓螈巨虫|夺心魔|巴拉乌尔|乌尔伽鲁|千竿口花希达|伽洛克|布隆特斯|虚无探索者|努纽努维|咕尔呱洛斯|南迪|牛头黑神|萨法特|火愤牛|阿格里帕).*?HP: (\d{7}).*?Pos: \((?&lt;posx&gt;.*),(?&lt;posy&gt;.*),(?&lt;posz&gt;.*)\)">
                     <Actions>
-                      <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage" Asynchronous="False">
+                      <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                        </Condition>
                       </Action>
                       <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                        </Condition>
                       </Action>
-                      <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/e  ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} )" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
+                      <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
                       </Action>
-                      <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl3 【琥珀】SSS出现  ${var:map} ( ${var:posx}  , ${var:posy} )" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson">
+                      <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/e  ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} )" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="8" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="hunt${var:map}|${var:posl}|${monster}" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl3 【琥珀】SSS出现  ${var:map} ( ${var:posx}  , ${var:posy} )" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="DiscordWebhook">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers />
+          </Folder>
+          <Folder Id="71e4a52e-6d97-44b9-975a-bb5c50c69335" Name="醒一醒" Enabled="true">
+            <Folders>
+              <Folder Id="c4e5a594-6a3f-4eb6-a47c-989c37eb7bbc" Name="选项 (点击一次启动选项)" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="false" Name="只播报5S" Id="686519d7-be92-4d99-9d25-190c1c00ccf7" RegularExpression="^.">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已启动5S播报" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="dea74f38-6e21-4368-a1b4-b1a22e5c75ab" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="7aa1fdec-720c-4703-95f0-51bfa4efbf05" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="686519d7-be92-4d99-9d25-190c1c00ccf7" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="false" Name="全部播报" Id="a30b2863-9fb9-4269-beb0-95f4d5161d29" RegularExpression="^.">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已启动全S播报" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="7aa1fdec-720c-4703-95f0-51bfa4efbf05" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="dea74f38-6e21-4368-a1b4-b1a22e5c75ab" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="a30b2863-9fb9-4269-beb0-95f4d5161d29" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="false" Name="自动转发 (施工中... 没有功能)" Id="e609c55e-e4b7-4cb7-a677-fd2e82460656" RegularExpression="^.">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已启动自动转发" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoforward}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已启动自动转发" VariableOp="SetNumeric" VariableName="autoforward" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoforward}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已关闭自动转发" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoforward}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已启动自动转发" VariableOp="SetNumeric" VariableName="autoforward" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:autoforward}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="e609c55e-e4b7-4cb7-a677-fd2e82460656" ActionType="Trigger">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="45311960-d819-421d-bbf8-7e4679fea078" Name="大喇叭 (↓↓↓↓下方设置↓↓↓↓)" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="false" Name="5.0" Id="dea74f38-6e21-4368-a1b4-b1a22e5c75ab" RegularExpression="(00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+                    <Actions>
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="醒一醒，5S快要凉了" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="雷克兰德|珂露西亚岛|安穆·艾兰|伊尔美格|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="全部" Id="7aa1fdec-720c-4703-95f0-51bfa4efbf05" RegularExpression="(00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+                    <Actions>
+                      <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="中拉诺西亚|拉诺西亚低地|东拉诺西亚|西拉诺西亚|拉诺西亚高地|拉诺西亚外地|黑衣森林中央林区|黑衣森林东部林区|黑衣森林南部林区|黑衣森林北部林区|西萨纳兰|中萨纳兰|东萨纳兰|南萨纳兰|北萨纳兰|库尔札斯中央高地|摩杜纳|库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海|基拉巴尼亚边区|基拉巴尼亚山区|基拉巴尼亚湖区|红玉海|延夏|太阳神草原|雷克兰德|珂露西亚岛|安穆·艾兰|伊尔美格|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or" />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1853,7 +1958,10 @@
                   </Trigger>
                   <Trigger Enabled="true" Name="重置计数" Id="5ee1e1a3-bbb1-4e0f-ad7b-f7a00acd4751" RegularExpression="0038:重置计数">
                     <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="airenmian" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已重置" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="airenmian" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1896,7 +2004,10 @@
                   </Trigger>
                   <Trigger Enabled="true" Name="重置计数" Id="1c62178e-35d0-4fa0-8b45-3452fa20e469" RegularExpression="0038:重置计数">
                     <Actions>
-                      <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="toss" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" UseTTSTextExpression="已重置" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="toss" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1950,29 +2061,37 @@
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="world" VariableExpression="琥珀原" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
-                  <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
+                  <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                    </Condition>
                   </Action>
-                  <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
+                  <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                    </Condition>
                   </Action>
-                  <Action OrderNumber="6" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="${var:world}, ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(1000,9000)">
+                  <Action OrderNumber="6" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="7" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="8" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="${var:world}, ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(1000,9000)" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="And">
@@ -1983,29 +2102,23 @@
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="world" VariableExpression="琥珀原" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="5" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                   <Action OrderNumber="6" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="${var:world}, ${var:map} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(1000,9000)">
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="And">
@@ -2017,7 +2130,7 @@
                   <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="哒哒哒！在${var:world}的 ${var:map}居然出现了 ${monster}！真是哒哒哒哒！?${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(1000,9000)">
+                  <Action OrderNumber="2" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="哒哒哒！在${var:world}的 ${var:map}居然出现了 ${monster}！真是哒哒哒哒！✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(1000,9000)">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
@@ -2030,13 +2143,13 @@
                   <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                  <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                  <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=7788" DiscordWebhookMessage="${var:world}, ${var:ditu}${var:zone0} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ?${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(6000,9000)">
+                  <Action OrderNumber="4" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=7788" DiscordWebhookMessage="${var:world}, ${var:ditu}${var:zone0} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(6000,9000)">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
