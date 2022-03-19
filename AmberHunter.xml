@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="e61e22de-ed0b-469d-9fbb-c5d0d5d12d0d" Name="琥珀原S触发器 (v6.220318)" Enabled="true">
+  <ExportedFolder Id="e61e22de-ed0b-469d-9fbb-c5d0d5d12d0d" Name="琥珀原S触发器 (v6.220319)" Enabled="true">
     <Folders>
       <Folder Id="7803396d-5104-4a59-b1e0-15718ca003ba" Name="狩猎报群 (××××不能关××××)" Enabled="true">
         <Folders>
@@ -88,19 +88,23 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Trigger>
-              <Trigger Enabled="true" Name="分线S" Id="1d669440-866b-4c24-8e7b-1099121e0a83" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;斯帕蒂卡|阿姆斯特朗|卜福尔|深思之物|狭缝|俄菲翁尼厄斯|阿格里帕):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7,8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+              <Trigger Enabled="true" Name="分线S" Id="1d669440-866b-4c24-8e7b-1099121e0a83" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;斯帕蒂卡|阿姆斯特朗|卜福尔|沉思之物|狭缝|俄菲翁尼厄斯|阿格里帕):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7,8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
-                  <Action OrderNumber="4" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=7788" DiscordWebhookMessage="${var:world}, ${var:ditu}${var:zone0} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(6000,9000)">
+                  <Action OrderNumber="4" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="${var:world}, ${var:ditu}${var:zone0} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}} , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} ), ${monster},$  ✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(6000,9000)">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="And">
@@ -135,16 +139,19 @@
           <Folder Id="b148d981-558d-4a02-be24-387b3e64de99" Name="S怪击杀上传 (塔爹狩猎时钟)" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="【需要设置机器人QQ自己QQ群号和token】击杀狩猎怪【strict_zone区域检测，verbos错误提示】" Id="1c844086-5ce1-4118-9578-14d03b9722e4" RegularExpression="Death (?&lt;type&gt;19):(?&lt;targetId&gt;[0-9A-F]{8}):(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特|阿格里帕|凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁|伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|得到宽恕的叛乱|斯帕蒂卡|阿姆斯特朗|卜福尔|深思之物|狭缝|俄菲翁尼厄斯)">
+              <Trigger Enabled="true" Name="【需要设置机器人QQ自己QQ群号和token】击杀狩猎怪【strict_zone区域检测，verbos错误提示】" Id="1c844086-5ce1-4118-9578-14d03b9722e4" RegularExpression="Death (?&lt;type&gt;19):(?&lt;targetId&gt;[0-9A-F]{8}):(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特|阿格里帕|凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁|伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|得到宽恕的叛乱|斯帕蒂卡|阿姆斯特朗|卜福尔|沉思之物|狭缝|俄菲翁尼厄斯)">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="${monster}击杀" UseTTSRateExpression="5" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" JsonEndpointExpression="https://xn--v9x.net/api/?tracker=hunt&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=${pvar:token}&amp;at=false&amp;strict_zone=true&amp;verbose=false" JsonPayloadExpression="{&quot;monster&quot;:&quot;${monster}&quot;, &quot;zone&quot;:&quot;${_zone}${var:zone}&quot;, &quot;time&quot;: &quot;${_timestamp}&quot;, &quot;worldid&quot;: &quot;${_ffxivparty[1].currentworldid}&quot;}" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="GenericJson">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="3" MessageBoxIconType="Error" MessageBoxText="${_timestamp}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="MessageBox">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
