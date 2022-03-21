@@ -253,7 +253,7 @@
           <Folder Id="02ed012b-b23f-48b7-b768-b011aa611eee" Name="醒一醒 (展开自行选择要播报的S)" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="5S" Id="f75a523a-5620-4685-8284-6f7f210e18c2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="5S" Id="f75a523a-5620-4685-8284-6f7f210e18c2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
@@ -265,7 +265,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="6S" Id="5ca2e182-7754-4740-9961-3010084b3892" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="6S" Id="5ca2e182-7754-4740-9961-3010084b3892" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006A):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
@@ -278,7 +278,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="3S" Id="5cc15a51-632e-4626-bd22-f37181e223cf" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="3S" Id="5cc15a51-632e-4626-bd22-f37181e223cf" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
@@ -290,7 +290,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="4S" Id="879aff28-3667-45bd-9a1c-d07d667a3178" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="4S" Id="879aff28-3667-45bd-9a1c-d07d667a3178" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
@@ -302,7 +302,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="2S" Id="bef3d38b-f798-4dd6-8295-dfcdb21cbff2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006a|00:006b):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="2S" Id="bef3d38b-f798-4dd6-8295-dfcdb21cbff2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="Or">
