@@ -93,9 +93,11 @@
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                   <Action OrderNumber="2" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="哒哒哒！在${var:world}的 ${var:map}居然出现了 ${monster}！真是哒哒哒哒！✿${_ffxivplayer}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="DiscordWebhook" ExecutionDelayExpression="random(1000,9000)">
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And">
@@ -494,44 +496,52 @@
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+21.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="posx" VariableExpression="round(${posx}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="posy" VariableExpression="round(${posy}*0.02+22.5,1)" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/e  ${var:map}${var:zone} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" Asynchronous="False">
+                      <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/e  ${var:map}${var:zone} ( ${func:format(System.Double,&quot;0.0&quot;):${var:posx}}  , ${func:format(System.Double,&quot;0.0&quot;):${var:posy}} )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="random(3000,4000)" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="8" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="hunt${var:map}|${var:posl}|${monster}" JsonEndpointExpression="http://127.0.0.1:2036/command" JsonPayloadExpression="/cwl3 【琥珀】SSS出现  ${var:map} ( ${var:posx}  , ${var:posy} )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="DiscordWebhook">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder ZoneFilterEnabled="True" Id="eeab325a-d901-4343-b5b7-947f7560804f" ZoneFilterRegularExpression="^雷克兰德$|^珂露西亚岛$|^安穆·艾兰$|^拉凯提卡大森林$|^伊尔美格$|^黑风海$" Name="自动标SS (需卫月框架 LiteralMapLink插件) 暂无6.0" Enabled="true">
+              <Folder ZoneFilterEnabled="True" Id="eeab325a-d901-4343-b5b7-947f7560804f" ZoneFilterRegularExpression="^雷克兰德$|^珂露西亚岛$|^安穆·艾兰$|^拉凯提卡大森林$|^伊尔美格$|^黑风海$|^迷津$|^萨维奈岛$|^加雷马$|^叹息海$|^厄尔庇斯$|^天外天垓$" Name="自动标SS (需卫月框架 LiteralMapLink插件)" Enabled="true">
                 <Folders>
                   <Folder Id="3c77e223-9c07-4185-8de8-ede4d7beb1ea" Name="手动 (【设置宏内容 /e 自动标SS】手动点宏发坐标)" Enabled="true">
                     <Folders />
@@ -540,21 +550,27 @@
                         <Actions>
                           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="551650c8-9e7e-442f-b2dc-6a627159ac73" TriggerText="[00:00:00.000] 00:0839:特殊恶名精英的手下开始了侦察活动……" TriggerZone="${_zone}" TriggerForce="parent" ActionType="Trigger" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
-                          <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh 小怪已经出现，一共四只，请各位冒险者火速前往小怪地点击杀小怪进行SS怪触发工作，禁止拉脱，石化眼背对。" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300">
+                          <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh 小怪已经出现，一共四只，请各位冒险者火速前往小怪地点击杀小怪进行SS怪触发工作，禁止拉脱，感谢配合。" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                           <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh ${plvar:AAA[${var:Szone}]} AAAAA" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="2*1000">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                           <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh ${plvar:BBB[${var:Szone}]} BBBBB" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="2*1000">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                           <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh ${plvar:CCC[${var:Szone}]} CCCCC" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="2*1000">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                           <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh ${plvar:DDD[${var:Szone}]} DDDDD" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="2*1000">
                             <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="Or">
@@ -567,43 +583,85 @@
                 <Triggers>
                   <Trigger Enabled="true" Name="检测地图/检查变量" Id="551650c8-9e7e-442f-b2dc-6a627159ac73" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0839::特殊恶名精英的手下开始了侦察活动……">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="Szone" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="雷克兰德" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="2" VariableOp="SetString" VariableName="Szone" VariableExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="珂露西亚岛" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="3" VariableOp="SetString" VariableName="Szone" VariableExpression="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="安穆·艾兰" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="4" VariableOp="SetString" VariableName="Szone" VariableExpression="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="伊尔美格" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="5" VariableOp="SetString" VariableName="Szone" VariableExpression="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="拉凯提卡大森林" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="6" VariableOp="SetString" VariableName="Szone" VariableExpression="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="黑风海" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="643578bf-6bbe-4180-a77b-0d7bbb9de227" TriggerForce="regexp,parent" ActionType="Trigger">
+                      <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="迷津" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="萨维奈岛" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="加雷马" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="叹息海" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="11" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="厄尔庇斯" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="12" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="天外天垓" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                        <Conditions />
+                      </Action>
+                      <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="643578bf-6bbe-4180-a77b-0d7bbb9de227" TriggerForce="regexp,parent" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionGroup Enabled="true" Grouping="Or">
-                            <ConditionSingle Enabled="true" ExpressionL="${plvar:AAA.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                            <ConditionSingle Enabled="true" ExpressionL="${plvar:BBB.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                            <ConditionSingle Enabled="true" ExpressionL="${plvar:CCC.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-                            <ConditionSingle Enabled="true" ExpressionL="${plvar:DDD.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            <ConditionSingle Enabled="true" ExpressionL="${plvar:AAA.size}" ExpressionTypeL="Numeric" ExpressionR="12" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            <ConditionSingle Enabled="true" ExpressionL="${plvar:BBB.size}" ExpressionTypeL="Numeric" ExpressionR="12" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            <ConditionSingle Enabled="true" ExpressionL="${plvar:CCC.size}" ExpressionTypeL="Numeric" ExpressionR="12" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                            <ConditionSingle Enabled="true" ExpressionL="${plvar:DDD.size}" ExpressionTypeL="Numeric" ExpressionR="12" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                           </ConditionGroup>
                           <ConditionGroup Enabled="true" Grouping="Or">
                             <ConditionSingle Enabled="true" ExpressionL="${eplvar:AAA}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
@@ -612,55 +670,70 @@
                             <ConditionSingle Enabled="true" ExpressionL="${eplvar:DDD}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           </ConditionGroup>
                         </Condition>
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="93ceb8f7-afb0-422a-9016-77188719234b" ActionType="Trigger">
+                      <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="93ceb8f7-afb0-422a-9016-77188719234b" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
-                    <Condition Enabled="true" Grouping="Or">
+                    <Condition Enabled="false" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Trigger>
                   <Trigger Enabled="true" Name="初始化 (第一次使用时，右键选择”执行“，只需操作一次，永久有效)" Id="643578bf-6bbe-4180-a77b-0d7bbb9de227" RegularExpression="">
                     <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="A" VariableExpression="雷克兰德 ( 12.0  , 10.3 );珂露西亚岛 ( 12.0  , 14.8 );安穆·艾兰 ( 13.6  , 11.6 );伊尔美格 ( 5.5  , 29.5 ) ;拉凯提卡大森林 ( 7.3  , 21.3 );黑风海 ( 8.4  , 6.7 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="A" VariableExpression="雷克兰德 ( 12.0  , 10.3 );珂露西亚岛 ( 12.0  , 14.8 );安穆·艾兰 ( 13.6  , 11.6 );伊尔美格 ( 5.5  , 29.5 ) ;拉凯提卡大森林 ( 7.3  , 21.3 );黑风海 ( 8.4  , 6.7 );迷津 ( 24.6  , 8.7 );萨维奈岛 ( 11.9  , 15.7 );加雷马 ( 16.6  , 9.2 );叹息海 ( 11.6  , 20.8 );厄尔庇斯 ( 17.2  , 7.4 );天外天垓 ( 16.2  , 16.3 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="2" VariableOp="SetString" VariableName="B" VariableExpression="雷克兰德 ( 11.1  , 24.6 );珂露西亚岛 ( 23.7  , 15.3 );安穆·艾兰 ( 30.2  , 9.6 );伊尔美格 ( 23.8  , 35.5 );拉凯提卡大森林 ( 19.0  , 22.2 );黑风海 ( 25.7  , 9.3 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="B" VariableExpression="雷克兰德 ( 11.1  , 24.6 );珂露西亚岛 ( 23.7  , 15.3 );安穆·艾兰 ( 30.2  , 9.6 );伊尔美格 ( 23.8  , 35.5 );拉凯提卡大森林 ( 19.0  , 22.2 );黑风海 ( 25.7  , 9.3 );迷津 ( 34.1  , 18.1 );萨维奈岛 ( 22.8  , 10.3 );加雷马 ( 32.3  , 8.1 );叹息海 ( 33.0  , 23.7 );厄尔庇斯 ( 29.1  , 7.1 );天外天垓 ( 31.9  , 9.7 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="3" VariableOp="SetString" VariableName="C" VariableExpression="雷克兰德 ( 32.8  , 12.6 );珂露西亚岛 ( 8.6  , 29.0 );安穆·艾兰 ( 14.0  , 31.8 ) ;伊尔美格 ( 32.1  , 11.0 );拉凯提卡大森林 ( 14.4  , 36.2 );黑风海 ( 37.4  , 13.8 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="3" VariableOp="SetString" VariableName="C" VariableExpression="雷克兰德 ( 32.8  , 12.6 );珂露西亚岛 ( 8.6  , 29.0 );安穆·艾兰 ( 14.0  , 31.8 ) ;伊尔美格 ( 32.1  , 11.0 );拉凯提卡大森林 ( 14.4  , 36.2 );黑风海 ( 37.4  , 13.8 );迷津 ( 8.9  , 22.2 );萨维奈岛 ( 16.9  , 30.0 );加雷马 ( 32.8  , 30.7 );叹息海 ( 11.8  , 35.8 );厄尔庇斯 ( 37.0  , 13.1 );天外天垓 ( 10.3  , 32.0 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="4" VariableOp="SetString" VariableName="D" VariableExpression="雷克兰德 ( 30.0  , 36.1 );珂露西亚岛 ( 33.7  , 32.6 );安穆·艾兰 ( 30.3  , 24.5 );伊尔美格 ( 25.1  , 22.0 );拉凯提卡大森林 ( 29.9  , 13.0 );黑风海 ( 33.8  , 29.8 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                      <Action OrderNumber="4" VariableOp="SetString" VariableName="D" VariableExpression="雷克兰德 ( 30.0  , 36.1 );珂露西亚岛 ( 33.7  , 32.6 );安穆·艾兰 ( 30.3  , 24.5 );伊尔美格 ( 25.1  , 22.0 );拉凯提卡大森林 ( 29.9  , 13.0 );黑风海 ( 33.8  , 29.8 );迷津 ( 25.7  , 32.2 );萨维奈岛 ( 33.3  , 24.5 );加雷马 ( 21.5  , 32.6 );叹息海 ( 28.6  , 35.1 );厄尔庇斯 ( 6.7  , 34.7 );天外天垓 ( 22.9  , 33.3 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="5" ListVariableOp="Split" ListVariableName="A" ListVariableExpression=";" ListVariableTarget="A" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="6" ListVariableOp="Split" ListVariableName="B" ListVariableExpression=";" ListVariableTarget="B" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="7" ListVariableOp="Split" ListVariableName="C" ListVariableExpression=";" ListVariableTarget="C" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="8" ListVariableOp="Split" ListVariableName="D" ListVariableExpression=";" ListVariableTarget="D" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="9" ListVariableOp="Copy" ListVariableName="A" ListVariableTarget="AAA" ListTargetPersist="True" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="100">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="10" ListVariableOp="Copy" ListVariableName="B" ListVariableTarget="BBB" ListTargetPersist="True" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="100">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="11" ListVariableOp="Copy" ListVariableName="C" ListVariableTarget="CCC" ListTargetPersist="True" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="100">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="12" ListVariableOp="Copy" ListVariableName="D" ListVariableTarget="DDD" ListTargetPersist="True" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable" ExecutionDelayExpression="100">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
-                      <Action OrderNumber="13" MessageBoxIconType="Information" MessageBoxText="变量列表加载完成。若不是6666，请重新执行操作。(${plvar:AAA.size}${plvar:BBB.size}${plvar:CCC.size}${plvar:DDD.size})" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="MessageBox">
+                      <Action OrderNumber="13" MessageBoxIconType="Information" MessageBoxText="变量列表加载完成。若不是121212，请重新执行操作。(${plvar:AAA.size}${plvar:BBB.size}${plvar:CCC.size}${plvar:DDD.size})" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="MessageBox">
                         <Condition Enabled="false" Grouping="Not" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
@@ -1057,32 +1130,41 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${epvar:port}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a37d1e9c-5b8b-4c5b-863a-39b1fcf559fa" TriggerText="0003:欢迎来到艾欧泽亚！" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/instance" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson">
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${var:map}" ExpressionTypeL="String" ExpressionR="摩杜纳|厄尔庇斯|加雷马|萨维奈岛|天外天垓|叹息海|迷津" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
+                <Conditions />
               </Action>
               <Action OrderNumber="4" VariableName="ettime" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="5" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="Timerclock" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="1c844086-5ce1-4118-9578-14d03b9722e4" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="0b39af41-aad5-4e3a-afc6-a2d591be1fba" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
               <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="4dca6a20-6c8e-4716-98b1-de9e11189822" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
-              <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="cfc05fec-edba-4052-bb93-a0079d9cfe2f" Enabled="False" ActionType="Trigger">
+              <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="93ceb8f7-afb0-422a-9016-77188719234b" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
@@ -1171,9 +1253,11 @@
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="特殊恶名精英的手下开始了侦察活动" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                       <Action OrderNumber="2" DiscordWebhookURL="https://xn--v9x.net/api/?tracker=qq&amp;bot_qq=1047360566&amp;qq=2892927698&amp;group=1020334025&amp;token=4567" DiscordWebhookMessage="${var:world}→${_zone}  特殊恶名精英的手下开始了侦查活动！" JsonEndpointExpression="http://127.0.0.1:2036/command" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiscordWebhook">
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
