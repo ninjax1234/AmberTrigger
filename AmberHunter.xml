@@ -1355,7 +1355,7 @@
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="89183f63-e674-465c-ba2c-e10958f0b499" Name="跨服贝转触发组扩散Q群" Enabled="true">
+      <Folder Id="89183f63-e674-465c-ba2c-e10958f0b499" Name="跨服贝转触发组扩散Q群 (有需求才开, 不用全部人都开)" Enabled="true">
         <Folders>
           <Folder Id="35ee39d2-f7cb-45b7-ae39-89dbb20780a7" Name="自动挡" Enabled="false">
             <Folders />
