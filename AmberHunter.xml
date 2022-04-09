@@ -1357,7 +1357,7 @@
       </Folder>
       <Folder Id="89183f63-e674-465c-ba2c-e10958f0b499" Name="跨服贝转触发组扩散Q群" Enabled="true">
         <Folders>
-          <Folder Id="35ee39d2-f7cb-45b7-ae39-89dbb20780a7" Name="自动挡" Enabled="true">
+          <Folder Id="35ee39d2-f7cb-45b7-ae39-89dbb20780a7" Name="自动挡" Enabled="false">
             <Folders />
             <Triggers>
               <Trigger Enabled="true" Name="5S" Id="d09f3736-64f6-402a-ba37-4189cc02e757" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:(?&lt;cwlcode&gt;(?:[^:]*)):[★|●|▲|♥|♠|♣|♦]?(((?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{1})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{2,3})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{4,5})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{6}))(?&lt;server&gt;琥珀原|紫水栈桥|柔风海湾|延夏|海猫茶屋|静语庄园|摩杜纳)?):【(琥珀|琥珀原)】((?&lt;message&gt;(.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+)))(?&lt;line&gt;(\ue0b1|\ue0b2|\ue0b3))? +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(?&lt;message&gt;((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+)))(?&lt;line&gt;(\ue0b1|\ue0b2|\ue0b3))? +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" RefirePeriodExpression="10*1000">
