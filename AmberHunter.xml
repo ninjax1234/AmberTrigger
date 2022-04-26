@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="e61e22de-ed0b-469d-9fbb-c5d0d5d12d0d" Name="琥珀原S触发器 (v6.220418b)" Enabled="true">
+  <ExportedFolder Id="877249f0-0f61-44ec-91d2-e396da6760f1" Name="琥珀原S触发器 (v6.220427)" Enabled="true">
     <Folders>
-      <Folder Id="7803396d-5104-4a59-b1e0-15718ca003ba" Name="狩猎报群 (××××不能关××××)" Enabled="true">
+      <Folder Id="fc4db299-b38a-455a-9b52-03a4f4b99e01" Name="狩猎报群 (××××不能关××××)" Enabled="true">
         <Folders>
-          <Folder Id="d7f87a8e-ce2c-47eb-b878-31789ea83f35" Name="发现猎物报群" Enabled="true">
+          <Folder Id="4e4fde93-8084-4c41-aa8a-acb69e03c6ca" Name="发现猎物报群" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="234S" Id="ad389d23-ae7e-4191-ba4e-242751efa3d5" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特||凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+              <Trigger Enabled="true" Name="234S" Id="d169ec65-772c-473d-8024-d0a1bee4cd8e" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特||凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5e0324c6-2f9d-4053-b7c9-0e25f793d08d" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="de501ca0-12f7-4798-b99b-8cc95607cd84" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:world}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -49,10 +49,11 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="56S" Id="5d52f319-562c-4a39-adab-8abd3fc28bf2" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+              <Trigger Enabled="true" Name="56S" Id="c0f51c4e-28d3-4957-931d-a56ea5fd8ea0" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5e0324c6-2f9d-4053-b7c9-0e25f793d08d" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="de501ca0-12f7-4798-b99b-8cc95607cd84" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:world}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -78,10 +79,11 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="SS" Id="ac7fc451-f4e6-49ac-b6ca-d05fc90ff18e" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;得到宽恕的叛乱|克尔):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+              <Trigger Enabled="true" Name="SS" Id="ea33e448-79d0-4994-9a4d-1e36c831db74" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;得到宽恕的叛乱|克尔):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5e0324c6-2f9d-4053-b7c9-0e25f793d08d" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="de501ca0-12f7-4798-b99b-8cc95607cd84" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:world}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -98,10 +100,11 @@
                 <Condition Enabled="false" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="分线S (阿格里帕版)" Id="1d669440-866b-4c24-8e7b-1099121e0a83" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;阿格里帕):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+              <Trigger Enabled="true" Name="分线S (阿格里帕版)" Id="fd4cdfa6-e765-4637-953d-4b49c890545c" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;阿格里帕):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5e0324c6-2f9d-4053-b7c9-0e25f793d08d" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="de501ca0-12f7-4798-b99b-8cc95607cd84" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:world}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -127,8 +130,9 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="Numeric" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Sequential="True" Name="当前地图/线路" Id="12ca0700-1e9c-4b2c-841b-3e76ab2e71d6" RegularExpression="0039::当前所在副本区为“(?&lt;ditu&gt;.*)(?&lt;xian&gt;||)”。">
+              <Trigger Enabled="true" Sequential="True" Name="当前地图/线路" Id="fc5417fd-aea8-41c7-82be-4af78e9ddd57" RegularExpression="0039::当前所在副本区为“(?&lt;ditu&gt;.*)(?&lt;xian&gt;||)”。">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="ditu" VariableExpression="${ditu}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -150,10 +154,11 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="分线S" Id="6fdda82e-3b85-4a4e-8eb7-f1cdc64247ae" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;斯帕蒂卡|阿姆斯特朗|卜福尔|沉思之物|狭缝|俄菲翁尼厄斯):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+              <Trigger Enabled="true" Name="分线S" Id="3482142c-e322-4a36-8e54-bc6656b8d84f" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;颇胝迦|阿姆斯特朗|布弗鲁|沉思之物|狭缝|俄菲翁尼厄斯):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                 <Actions>
-                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5e0324c6-2f9d-4053-b7c9-0e25f793d08d" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="de501ca0-12f7-4798-b99b-8cc95607cd84" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:world}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
@@ -179,13 +184,14 @@
                 <Condition Enabled="false" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${var:world}" ExpressionTypeL="String" ExpressionR="延夏" ExpressionTypeR="Numeric" ConditionType="RegexNotMatch" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="b148d981-558d-4a02-be24-387b3e64de99" Name="S怪击杀上传 (塔爹狩猎时钟)" Enabled="true">
+          <Folder Id="f9e3de3c-a965-44ee-805f-a3065aa5bc7f" Name="S怪击杀上传 (塔爹狩猎时钟)" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Name="【需要设置机器人QQ自己QQ群号和token】击杀狩猎怪【strict_zone区域检测，verbos错误提示】" Id="1c844086-5ce1-4118-9578-14d03b9722e4" RegularExpression="Death 19:........:(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特|阿格里帕|凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁|伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|得到宽恕的叛乱|得到宽恕的流言|沉思之物|阿姆斯特朗|俄菲翁尼厄斯|狭缝):">
+              <Trigger Enabled="false" Name="【需要设置机器人QQ自己QQ群号和token】击杀狩猎怪【strict_zone区域检测，verbos错误提示】" Id="540825ab-7434-4bfd-80f1-e15aff523a42" RegularExpression="Death 19:........:(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特|阿格里帕|凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁|伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|得到宽恕的叛乱|得到宽恕的流言|沉思之物|阿姆斯特朗|俄菲翁尼厄斯|狭缝):">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="${monster}击杀" UseTTSRateExpression="5" TextAuraFontSize="9" TextAuraFontName="SimSun" Enabled="False" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -195,8 +201,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="区域/分线" Id="2a31c200-d189-4293-ad5a-5eb12a351a61" RegularExpression="0039::当前所在副本区为“.*(?&lt;zone&gt;||)”。">
+              <Trigger Enabled="true" Name="区域/分线" Id="93b5f362-813e-42ff-99a0-61b47f104d59" RegularExpression="0039::当前所在副本区为“.*(?&lt;zone&gt;||)”。">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="zone" VariableExpression="${zone}" TextAuraFontSize="9" TextAuraFontName="SimSun" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -206,18 +213,19 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="3553dc34-3029-4259-bddc-75b345ad2d70" Name="摸鱼功能 (请在分类上勾选要启动的功能)" Enabled="true">
+      <Folder Id="7efc61a4-fe13-401e-8110-d0c7d19de979" Name="摸鱼功能 (请在分类上勾选要启动的功能)" Enabled="true">
         <Folders>
-          <Folder Id="5dcc6f76-ff29-48c3-aa9e-c66d6d1a4a9d" Name="定时提醒" Enabled="true">
+          <Folder Id="c80e065c-7603-407d-bfd4-5114c71d1be1" Name="定时提醒" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Sequential="True" Name="开怪倒计时(ET)" Id="0b39af41-aad5-4e3a-afc6-a2d591be1fba" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:((000B|001E|000A|0038):((★|●|▲|♥|♠|♣|♦)?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):(.*)?[ETet ]+\s?\s?(\W{0,})?\s?(ET|et|Et|eT)?(?&lt;hour&gt;[0-9]|(0|1)[0-9]|2[0-3])\s?[:： ;.]\s?(?&lt;minute&gt;[0-5][0-9])([^0-9]+)?)|(\bET\s?(?&lt;hour&gt;[0-9]|(0|1)[0-9]|2[0-3])(?&lt;minute&gt;[0-5][0-9])\b))" PeriodRefire="Deny" RefirePeriodExpression="5000">
+              <Trigger Enabled="false" Sequential="True" Name="开怪倒计时(ET)" Id="2e38c597-492d-4143-b700-a9b053c630d5" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:((000B|001E|000A|0038:):((★|●|▲|♥|♠|♣|♦)?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):(.*)?[ETet ]+\s?\s?(\W{0,})?\s?(ET|et|Et|eT)?(?&lt;hour&gt;[0-9]|(0|1)[0-9]|2[0-3])\s?[:： ;.]\s?(?&lt;minute&gt;[0-5][0-9])([^0-9]+)?)|(\bET\s?(?&lt;hour&gt;[0-9]|(0|1)[0-9]|2[0-3])(?&lt;minute&gt;[0-5][0-9])\b))" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
                   <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -249,7 +257,7 @@
                   </Action>
                   <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="realcountdown" VariableExpression="${var:countdown}*2.9167" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="300" Asynchronous="False">
                     <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:countdown}" ExpressionTypeL="Numeric" ExpressionR="100" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:countdown}" ExpressionTypeL="Numeric" ExpressionR="300" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                     </Condition>
                   </Action>
                   <Action OrderNumber="10" TextAuraAlignment="MiddleLeft" TextAuraEffect="Bold" TextAuraFontSize="14.25" TextAuraForeground="Red" TextAuraName="Timerclock" TextAuraExpression="已定时: ET${var:hour}:${func:padleft(048,2):${var:minute}}&#xA;倒计时: ${numeric:round(${var:realcountdown}-${_sincems}/1000)}秒" TextAuraXIniExpression="${pvar:screenX}" TextAuraYIniExpression="${pvar:screenY}-50" TextAuraWIniExpression="222" TextAuraHIniExpression="62" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${var:realcountdown}*1000-${_sincems}" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura" ExecutionDelayExpression="300" Asynchronous="False" RefireRequeue="False">
@@ -258,7 +266,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="301" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="11" TextAuraAlignment="MiddleLeft" TextAuraEffect="Bold" TextAuraFontSize="11.25" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraName="TimerclockNote" TextAuraExpression="*倒计时存在±3秒的误差*" TextAuraXIniExpression="${pvar:screenX}" TextAuraYIniExpression="${pvar:screenY}" TextAuraWIniExpression="222" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${var:realcountdown}*1000-${_sincems}" TextAuraUseOutline="True" TextAuraFontName="Microsoft YaHei" ActionType="TextAura" ExecutionDelayExpression="300" Asynchronous="False" RefireRequeue="False">
+                  <Action OrderNumber="11" TextAuraAlignment="MiddleLeft" TextAuraEffect="Bold" TextAuraFontSize="11.25" TextAuraForeground="Yellow" TextAuraOutline="Black" TextAuraName="TimerclockNote" TextAuraExpression="*倒计时存在±3秒的误差*" TextAuraXIniExpression="${pvar:screenX}" TextAuraYIniExpression="${pvar:screenY}" TextAuraWIniExpression="222" TextAuraHIniExpression="35" TextAuraOIniExpression="100" TextAuraTTLTickExpression="${var:realcountdown}*1000-${_sincems}" TextAuraUseOutline="True" TextAuraFontName="Microsoft YaHei" ActionType="TextAura" Asynchronous="False" RefireRequeue="False">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="301" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
@@ -267,18 +275,16 @@
                   <Action OrderNumber="12" UseTTSTextExpression="倒计时 ${numeric:round(${var:realcountdown})}秒" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
-                      <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="301" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:realcountdown}" ExpressionTypeL="Numeric" ExpressionR="600" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
                     </Condition>
-                  </Action>
-                  <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="7b473a95-2b0e-415a-a0ec-a3bedc168584" Enabled="False" ActionType="Trigger">
-                    <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${hour}*60+${minute}" ExpressionTypeL="Numeric" ExpressionR="${var:ettime}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="倒计时提醒 (如发现有不触发提醒的倒计时宏，请复制上报倒计时文本，以便加入触发器里)" Id="382ecdf2-1c0e-4cb4-8d0c-eead3fcc4d57" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:((000B|001E|000A|0038:):((★|●|▲|♥|♠|♣|♦)?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+))):((.*)?击杀倒计时(.*)?|(.*)?将于(.*)后开打|倒计时(.*)秒|(.*)?秒开怪)">
+              <Trigger Enabled="false" Name="倒计时提醒 (如发现有不触发提醒的倒计时宏，请复制上报倒计时文本，以便加入触发器里)" Id="3e99b58e-d5f9-494b-905a-cf7a1eb344f6" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:((000B|001E|000A|0038:):((★|●|▲|♥|♠|♣|♦)?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+))):((.*)?击杀倒计时(.*)?|(.*)?将于(.*)后开打|倒计时(.*)秒|(.*)?秒开怪)">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="准备开怪" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -288,13 +294,14 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="02ed012b-b23f-48b7-b768-b011aa611eee" Name="醒一醒 (展开自行选择要播报的S)" Enabled="true">
+          <Folder Id="ff50b79e-8aac-46b7-a60f-b240d569af77" Name="醒一醒 (展开自行选择要播报的S)" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="5S" Id="f75a523a-5620-4685-8284-6f7f210e18c2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="5S" Id="be2594b3-0fca-40b1-9006-2ded96018383" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，5S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -303,8 +310,9 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="雷克兰德|珂露西亚岛|安穆·艾兰|伊尔美格|拉凯提卡大森林|黑风海" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="6S" Id="5ca2e182-7754-4740-9961-3010084b3892" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="6S" Id="3810118b-7ebd-4180-b45e-ad8742ea3f3f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，666666S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -314,8 +322,9 @@
                   <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="加雷马|叹息海|天外天垓|厄尔庇斯|萨维奈岛|迷津" ExpressionTypeR="String" ConditionType="RegexMatch" />
                   <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="加雷马|加雷马|加雷马|叹息海|叹息海|叹息海|天外天垓|天外天垓|天外天垓|厄尔庇斯|厄尔庇斯|厄尔庇斯|萨维奈岛|萨维奈岛|萨维奈岛|迷津|迷津|迷津" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="3S" Id="5cc15a51-632e-4626-bd22-f37181e223cf" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="3S" Id="0454e802-56c9-47f4-9629-dab836a92b99" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，3S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -324,8 +333,9 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="库尔札斯西部高地|阿巴拉提亚云海|魔大陆阿济兹拉|龙堡参天高地|龙堡内陆低地|翻云雾海" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="4S" Id="879aff28-3667-45bd-9a1c-d07d667a3178" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="4S" Id="08db8ae4-1d89-420f-bc79-4950b38ad1d1" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，4S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -334,8 +344,9 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="基拉巴尼亚边区|基拉巴尼亚山区|基拉巴尼亚湖区|红玉海|延夏|太阳神草原" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="2S" Id="bef3d38b-f798-4dd6-8295-dfcdb21cbff2" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
+              <Trigger Enabled="true" Name="2S" Id="88ba63ef-5bd9-49c3-9dc6-2f796725f950" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog (00:0025|00:0065|00:0066|00:0067|00:0068|00:0069|00:006A|00:006B):(?&lt;name&gt;[★|●|▲|♥|♠|♣|♦]?([\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)):(((.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny" RefirePeriodExpression="30*1000">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="醒一醒，2S快要凉了" UseTTSVolumeExpression="80" UseTTSRateExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -345,15 +356,16 @@
                   <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="中拉诺西亚|拉诺西亚低地|东拉诺西亚|西拉诺西亚|拉诺西亚高地|拉诺西亚外地|黑衣森林中央林区|黑衣森林东部林区|黑衣森林南部林区|黑衣森林北部林区|西萨纳兰|中萨纳兰|东萨纳兰|南萨纳兰|北萨纳兰|库尔札斯中央高地|摩杜纳" ExpressionTypeR="String" ConditionType="RegexMatch" />
                   <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="摩杜纳|摩杜纳|摩杜纳" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="946de3ea-e011-4c1d-af40-8268fb1f6f9b" Name="扩充功能 （需卫月框架）" Enabled="false">
+          <Folder Id="1c243fa6-43d5-42f5-8b32-f40e7ce85e89" Name="扩充功能 （需卫月框架）" Enabled="false">
             <Folders>
-              <Folder Id="44f34e01-acf2-42ac-9e51-73085c79db2c" Name="文本坐标→可点击坐标" Enabled="true">
+              <Folder Id="e45df1b8-fcde-4c8e-b053-98534b508f3c" Name="文本坐标→可点击坐标" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="56S" Id="815ba999-00dd-4930-99f1-d74c35242eeb" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|得到宽恕的叛乱):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+                  <Trigger Enabled="true" Name="56S" Id="d366a1fa-18e6-4c1d-a99a-65891a512ee1" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|得到宽恕的叛乱):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
@@ -372,8 +384,9 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="234S" Id="3e2aa5ce-ae4b-4a2c-8bfa-130ae087917c" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特||凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+                  <Trigger Enabled="true" Name="234S" Id="61d92354-6210-4952-bcdd-fbe31b25455d" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特||凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
@@ -411,8 +424,9 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="分线S" Id="1d9dcf0d-3d26-4443-9a05-78f31f91273b" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;斯帕蒂卡|阿姆斯特朗|卜福尔|沉思之物|狭缝|俄菲翁尼厄斯|阿格里帕):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7,8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+                  <Trigger Enabled="true" Name="分线S" Id="cb83f272-0d27-4e64-a1a2-6f36a93dc47e" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;颇胝迦|阿姆斯特朗|布弗鲁|沉思之物|狭缝|俄菲翁尼厄斯|阿格里帕):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7,8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="${_event}" LogLevel="Info" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
@@ -445,17 +459,18 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder ZoneFilterEnabled="True" Id="eeab325a-d901-4343-b5b7-947f7560804f" ZoneFilterRegularExpression="^雷克兰德$|^珂露西亚岛$|^安穆·艾兰$|^拉凯提卡大森林$|^伊尔美格$|^黑风海$|^迷津$|^萨维奈岛$|^加雷马$|^叹息海$|^厄尔庇斯$|^天外天垓$" Name="自动标SS (需卫月框架 LiteralMapLink插件)" Enabled="true">
+              <Folder ZoneFilterEnabled="True" Id="aa577c34-d09e-4abc-bb6d-0de980ef8e7b" ZoneFilterRegularExpression="^雷克兰德$|^珂露西亚岛$|^安穆·艾兰$|^拉凯提卡大森林$|^伊尔美格$|^黑风海$|^迷津$|^萨维奈岛$|^加雷马$|^叹息海$|^厄尔庇斯$|^天外天垓$" Name="自动标SS (需卫月框架 LiteralMapLink插件)" Enabled="true">
                 <Folders>
-                  <Folder Id="3c77e223-9c07-4185-8de8-ede4d7beb1ea" Name="手动 (【设置宏内容 /e 自动标SS】手动点宏发坐标)" Enabled="true">
+                  <Folder Id="6178162f-07be-4287-9517-f838e8ce8769" Name="手动 (【设置宏内容 /e 自动标SS】手动点宏发坐标)" Enabled="true">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="false" Name="开始标 (手动) " Id="93ceb8f7-afb0-422a-9016-77188719234b" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::自动标SS">
+                      <Trigger Enabled="false" Name="开始标 (手动) " Id="36991d61-b5ad-4dfc-9e55-5b39b7c8ce57" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::自动标SS">
                         <Actions>
-                          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="551650c8-9e7e-442f-b2dc-6a627159ac73" TriggerText="[00:00:00.000] 00:0839:特殊恶名精英的手下开始了侦察活动……" TriggerZone="${_zone}" TriggerForce="parent" ActionType="Trigger" Asynchronous="False">
+                          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="2cc7b8ef-1b35-414f-bb5c-2444f789b1c3" TriggerText="[00:00:00.000] 00:0839:特殊恶名精英的手下开始了侦察活动……" TriggerZone="${_zone}" TriggerForce="parent" ActionType="Trigger" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                           <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh 小怪已经出现，一共四只，请各位冒险者火速前往小怪地点击杀小怪进行SS怪触发工作，禁止拉脱，感谢配合。" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="300">
@@ -477,12 +492,13 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
                         </Condition>
+                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
                 </Folders>
                 <Triggers>
-                  <Trigger Enabled="true" Name="检测地图/检查变量" Id="551650c8-9e7e-442f-b2dc-6a627159ac73" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0839::特殊恶名精英的手下开始了侦察活动……">
+                  <Trigger Enabled="true" Name="检测地图/检查变量" Id="2cc7b8ef-1b35-414f-bb5c-2444f789b1c3" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0839::特殊恶名精英的手下开始了侦察活动……">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="Szone" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
@@ -544,7 +560,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${_zone}" ExpressionTypeL="String" ExpressionR="天外天垓" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="643578bf-6bbe-4180-a77b-0d7bbb9de227" TriggerForce="regexp,parent" ActionType="Trigger">
+                      <Action OrderNumber="13" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="34af378e-08ed-4395-a4e1-49f4a6b1b9d9" TriggerForce="regexp,parent" ActionType="Trigger">
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionGroup Enabled="true" Grouping="Or">
                             <ConditionSingle Enabled="true" ExpressionL="${plvar:AAA.size}" ExpressionTypeL="Numeric" ExpressionR="12" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
@@ -560,15 +576,16 @@
                           </ConditionGroup>
                         </Condition>
                       </Action>
-                      <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="93ceb8f7-afb0-422a-9016-77188719234b" ActionType="Trigger">
+                      <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="36991d61-b5ad-4dfc-9e55-5b39b7c8ce57" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="StringEqualNocase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="初始化 (第一次使用时，右键选择”执行“，只需操作一次，永久有效)" Id="643578bf-6bbe-4180-a77b-0d7bbb9de227" RegularExpression="">
+                  <Trigger Enabled="true" Name="初始化 (第一次使用时，右键选择”执行“，只需操作一次，永久有效)" Id="34af378e-08ed-4395-a4e1-49f4a6b1b9d9" RegularExpression="">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="A" VariableExpression="雷克兰德 ( 12.0  , 10.3 );珂露西亚岛 ( 12.0  , 14.8 );安穆·艾兰 ( 13.6  , 11.6 );伊尔美格 ( 5.5  , 29.5 ) ;拉凯提卡大森林 ( 7.3  , 21.3 );黑风海 ( 8.4  , 6.7 );迷津 ( 24.6  , 8.7 );萨维奈岛 ( 11.9  , 15.7 );加雷马 ( 17.7  , 10.2 );叹息海 ( 11.6  , 20.8 );厄尔庇斯 ( 17.2  , 7.4 );天外天垓 ( 16.2  , 16.3 )" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -611,94 +628,87 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="9e34d777-068a-4893-a425-5c765fe4159b" Name="自动转发 （必须自定义才能使用，详情请群里询问）" Enabled="false">
+              <Folder Id="c3b378e9-f451-48eb-8e25-dfd4b72211e2" Name="自动转发 （必须自定义才能使用，详情请群里询问）" Enabled="false">
                 <Folders>
-                  <Folder Id="275cb85b-c4d3-4973-832d-257fd2eec9a2" Name="使用说明" Enabled="true">
+                  <Folder Id="e15413c8-623b-41dd-871c-d4fb1e608005" Name="唢呐转发" Enabled="false">
                     <Folders />
                     <Triggers>
-                      <Trigger Enabled="true" Name="点开查看描述" Id="5f087dc2-aae0-4b3d-bf07-7fc8f238f668" RegularExpression="" Description="使用要求:&#xD;&#xA;1. 鲶鱼精邮差&#xD;&#xA;2. 卫月框架 - Literal Map Link 插件&#xD;&#xA;&#xD;&#xA;跨服贝代码:&#xD;&#xA;1 00:0025&#xD;&#xA;2 00:0065&#xD;&#xA;3 00:0066&#xD;&#xA;4 00:0067&#xD;&#xA;5 00:0068&#xD;&#xA;6 00:0069&#xD;&#xA;7 00:006a&#xD;&#xA;8 00:006b&#xD;&#xA;&#xD;&#xA;触发条件 ${_ffxivplayer} 改成自己的名字&#xD;&#xA;3项鲶鱼精触发动作改成自己对应的跨服通讯贝号码&#xD;&#xA;cwshell 改成对应的 跨服贝代码&#xD;&#xA;">
-                        <Actions />
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Trigger>
-                    </Triggers>
-                  </Folder>
-                  <Folder Id="79561066-3555-4d62-ada2-676cdb087296" Name="唢呐转发" Enabled="true">
-                    <Folders />
-                    <Triggers>
-                      <Trigger Enabled="true" Name="S发现" Id="a072a1bf-330b-4601-8999-2c1cc48c12cd" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038:Sonar:Rank S: (?&lt;message&gt;(?&lt;monster&gt;.*) ⇒ (?&lt;place&gt;(([a-zA-Z \u00b7\u4e00-\u9fa5]+)))(?&lt;line&gt;[\ue0b1\ue0b2\ue0b3\])? (?&lt;pos&gt;\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)) &lt;?(?&lt;Sserver&gt;.*)&gt;$)" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                      <Trigger Enabled="false" Name="S发现" Id="d75bc631-f51d-47d7-a099-8735adbaf1bc" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038:Sonar:Rank S: (?&lt;message&gt;(?&lt;monster&gt;.*) ⇒ (?&lt;place&gt;(([a-zA-Z \u00b7\u4e00-\u9fa5]+)))(?&lt;line&gt;[\ue0b1\ue0b2\ue0b3\])? (?&lt;pos&gt;\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))) &lt;?(?&lt;Sserver&gt;.*)&gt;$" PeriodRefire="Deny" RefirePeriodExpression="1000">
                         <Actions>
-                          <Action OrderNumber="0" VariableOp="SetNumeric" VariableName="serverID" VariableExpression="1043" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="紫水栈桥" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl3 【唢呐转发】&lt;${Sserver}&gt; ${message} SSSSS" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson" ExecutionDelayExpression="500">
+                            <Condition Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                             </Condition>
                           </Action>
-                          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="serverID" VariableExpression="1169" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="延夏" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="serverID" VariableExpression="1045" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="摩杜纳" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="serverID" VariableExpression="1178" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="柔风海湾" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="serverID" VariableExpression="1179" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="琥珀原" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="serverID" VariableExpression="1106" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="静语庄园" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="serverID" VariableExpression="1177" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="海猫茶屋" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl3 【唢呐转发】${message} SSSSS" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
-                            <Condition Enabled="false" Grouping="And">
-                              <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[_ffxiv" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/e ${Sserver} /${place}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson">
+                          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/e ${Sserver} /${place}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${place}" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                          <ConditionGroup Enabled="true" Grouping="Not">
+                            <ConditionGroup Enabled="true" Grouping="And">
+                              <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="紫水栈桥|柔风海湾|静语庄园|延夏|海猫茶屋|摩杜纳" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                              <ConditionSingle Enabled="true" ExpressionL="${monster}" ExpressionTypeL="String" ExpressionR="咕尔呱洛斯|夺心魔" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                            </ConditionGroup>
+                          </ConditionGroup>
                         </Condition>
+                        <Conditions />
                       </Trigger>
-                      <Trigger Enabled="true" Name="Fate" Id="05e8e202-3659-4396-bac9-9cfc0b218e44" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038:Sonar:Fate: (?&lt;message&gt;.*)">
+                      <Trigger Enabled="false" Name="Fate (准备战)" Id="5af68e0a-1e14-4596-b43c-41ffcd7878f0" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038:Sonar:Fate: (?&lt;message&gt;.*) &lt;?(?&lt;server&gt;.*)&gt; \(Preparation\)">
                         <Actions>
-                          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl3 【FATE】${message}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl3 【FATE】&lt;${server}&gt; ${message}, （准备战）" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Trigger>
-                      <Trigger Enabled="true" Name="S击杀" Id="8f4cff99-baef-446a-a02a-b2482412dfa0" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038:Sonar:Rank S: (?&lt;message&gt;(.*)) (was just killed)$">
+                      <Trigger Enabled="true" Name="S击杀" Id="8433345e-9308-4446-a0f1-bf1f5a6a3ddc" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038:Sonar:Rank S: (?&lt;monster&gt;.*) ⇒ (?&lt;place&gt;(([a-zA-Z\u00b7 \u4e00-\u9fa5]+)))(?&lt;line&gt;\ue0b1|\ue0b2|\ue0b3)? +(?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))) &lt;?(?&lt;server&gt;.*)&gt; (was just killed)$">
                         <Actions>
-                          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl3 【速报】${message} 已被击杀，凉了凉了， 不用来了。" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl3 【速报】&lt;${server}&gt; 《${monster}${line}》 已被击杀，凉了凉了， 不用来了。" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                            <Condition Enabled="true" Grouping="Not">
+                              <ConditionGroup Enabled="true" Grouping="And">
+                                <ConditionSingle Enabled="true" ExpressionL="${Sserver}" ExpressionTypeL="String" ExpressionR="紫水栈桥|柔风海湾|静语庄园|延夏|海猫茶屋|摩杜纳" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                                <ConditionSingle Enabled="true" ExpressionL="${monster}" ExpressionTypeL="String" ExpressionR="咕尔呱洛斯|夺心魔" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                              </ConditionGroup>
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="SystemBeep">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="false" Name="Fate" Id="5ec3ffac-8c87-4674-a3ce-12d881306a6a" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038:Sonar:Fate: (?&lt;message&gt;.*) &lt;?(?&lt;server&gt;.*)&gt; \((?&lt;progress&gt;\d%) with (?&lt;timer&gt;.{5}) remaining\)">
+                        <Actions>
+                          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl3 【FATE】&lt;${server}&gt; ${message}, 进度: ${progress}, 剩余时间: ${timer}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                  <Folder Id="d2bcfd2c-5c68-470a-9f0f-e811cdef946b" Name="使用说明" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Name="点开查看描述" Id="fde53771-a377-4748-92a1-bb5ba952fd0b" RegularExpression="" Description="使用要求:&#xD;&#xA;1. 鲶鱼精邮差&#xD;&#xA;2. 卫月框架 - Literal Map Link 插件&#xD;&#xA;&#xD;&#xA;跨服贝代码:&#xD;&#xA;1 00:0025&#xD;&#xA;2 00:0065&#xD;&#xA;3 00:0066&#xD;&#xA;4 00:0067&#xD;&#xA;5 00:0068&#xD;&#xA;6 00:0069&#xD;&#xA;7 00:006a&#xD;&#xA;8 00:006b&#xD;&#xA;&#xD;&#xA;触发条件 ${_ffxivplayer} 改成自己的名字&#xD;&#xA;3项鲶鱼精触发动作改成自己对应的跨服通讯贝号码&#xD;&#xA;cwshell 改成对应的 跨服贝代码&#xD;&#xA;">
+                        <Actions />
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
                 </Folders>
                 <Triggers>
-                  <Trigger Enabled="true" Name="自动转发 (紫水版)" Id="4755fb91-4b25-4cff-8d65-c8f832b458c5" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:(?&lt;cwshell&gt;0025|006A|0069):[★|●|▲|♥|♠|♣|♦]?(((?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{1})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{2,3})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{4,5})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{6}))(?&lt;server&gt;琥珀原|紫水栈桥|柔风海湾|延夏|海猫茶屋|静语庄园|摩杜纳)?):((?&lt;message&gt;(.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(?&lt;message&gt;((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PrevActionsRefire="Deny" RefirePeriodExpression="5000">
+                  <Trigger Enabled="true" Name="自动转发 (紫水版)" Id="d36d229c-685f-4140-9fb8-8d15fcfd0928" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:(?&lt;cwshell&gt;0025|006A|0069):[★|●|▲|♥|♠|♣|♦]?(((?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{1})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{2,3})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{4,5})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{6}))(?&lt;server&gt;琥珀原|紫水栈桥|柔风海湾|延夏|海猫茶屋|静语庄园|摩杜纳)?):((?&lt;message&gt;(.*?)(?i)(SSS出现|sssss|sssssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(?&lt;message&gt;((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss|sssssss))(.*?))))" PrevActionsRefire="Deny" RefirePeriodExpression="5000">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="server" VariableExpression="${server}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -786,8 +796,9 @@
                         </ConditionGroup>
                       </ConditionGroup>
                     </Condition>
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="false" Name="自动转发 (希希专用版版)" Id="90311ad4-351b-44c6-bdc4-540dd8d1ca56" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:(?&lt;cwshell&gt;006B|0068|0067):[★|●|▲|♥|♠|♣|♦]?(((?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{1})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{2,3})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{4,5})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{6}))(?&lt;server&gt;琥珀原|紫水栈桥|柔风海湾|延夏|海猫茶屋|静语庄园|摩杜纳)?):((?&lt;message&gt;(.*?)(?i)(SSS出现|sssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(?&lt;message&gt;((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss))(.*?))))" PeriodRefire="Deny">
+                  <Trigger Enabled="false" Name="自动转发 (希希专用版版)" Id="a6b9a6d9-3432-405b-902b-6f9a9e51b72f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:(?&lt;cwshell&gt;0025|006A|0069):[★|●|▲|♥|♠|♣|♦]?(((?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{1})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{2,3})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{4,5})|(?&lt;name&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]{6}))(?&lt;server&gt;琥珀原|紫水栈桥|柔风海湾|延夏|海猫茶屋|静语庄园|摩杜纳)?):((?&lt;message&gt;(.*?)(?i)(SSS出现|sssss|sssssss)(.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\))))))|(?&lt;message&gt;((.*?)((?&lt;place&gt;(([a-zA-Z \u00b7\ue0b1\ue0b2\ue0b3 \u4e00-\u9fa5]+))) +((?&lt;pos&gt;(\( +[0-9]+\.[0-9] +, +[0-9]+\.[0-9] +\)))))(.*?)?((?i)(SSS出现|sssss|sssssss))(.*?))))" PeriodRefire="Deny">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="server" VariableExpression="${server}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -864,52 +875,57 @@
                       </ConditionGroup>
                       <ConditionSingle Enabled="true" ExpressionL="${server}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
                     </Condition>
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="9fd763d8-4ca4-49b3-8629-3a7a99384c6e" Name="小队 (需鲶鱼精邮差))" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="自动加入小队 (需要鲶鱼精邮差)" Id="3bc9baa3-3305-4adf-b089-4c602515c0b0" RegularExpression="ChatLog 00:2039::收到了(?&lt;inviter&gt;.*)发来的入队邀请。">
+                    <Actions>
+                      <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers />
           </Folder>
-          <Folder Id="47f0ad8f-d9a0-4cb7-bd67-aafb03288b82" Name="小队 (需鲶鱼精邮差))" Enabled="true">
-            <Folders />
-            <Triggers>
-              <Trigger Enabled="true" Name="自动加入小队 (需要鲶鱼精邮差)" Id="d473b52c-af6e-46ff-9391-810d8427b08d" RegularExpression="ChatLog 00:2039::收到了(?&lt;inviter&gt;.*)发来的入队邀请。">
-                <Actions>
-                  <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/join" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or">
-                  <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                </Condition>
-              </Trigger>
-            </Triggers>
-          </Folder>
-          <Folder Id="d7e55241-491e-456b-9c3b-f3ed185ff7c8" Name="挂机报贝 (需鲶鱼精邮差) 【/e 挂机报贝 1】或 【/e 挂机报贝 1 2】或【/e 挂机报贝 1 2 3】(请改成要转发的跨服贝号，转发多与1个贝，请用空格区开贝号，只支持转发3个贝)" Enabled="true">
+          <Folder Id="95a157fa-4480-46e8-83c2-1929b16e904c" Name="挂机报贝 (需鲶鱼精邮差) 【/e 挂机报贝 1】或 【/e 挂机报贝 1 2】或【/e 挂机报贝 1 2 3】(请改成要转发的跨服贝号，转发多与1个贝，请用空格区开贝号，只支持转发3个贝)" Enabled="true">
             <Folders>
-              <Folder Id="f967531c-07b0-44f7-bbba-55456043c53f" Name="使用说明" Enabled="true">
+              <Folder Id="97d73dfa-ed0f-42dc-943f-c7e58dfa4144" Name="使用说明" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 制作一个开关宏, 内容为: /e 挂机报贝 1 (数字自行更改为要报的跨服贝号码)" Id="cfa2eae2-b80f-41bc-b6c3-18cb77016bd8" RegularExpression="">
+                  <Trigger Enabled="true" Name="1. 制作一个开关宏, 内容为: /e 挂机报贝 1 (数字自行更改为要报的跨服贝号码)" Id="a0cf3fdf-c67d-4d53-9d37-7894a3c36af4" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="2. 启动鲶鱼精邮差, 并设定端口为: 2036" Id="16d2838b-3e31-403b-889d-48b2ebef6324" RegularExpression="">
+                  <Trigger Enabled="true" Name="2. 启动鲶鱼精邮差, 并设定端口为: 2036" Id="ed447515-97f7-4ae2-9cfa-a6fcbfda90ce" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="3. 按一次开关宏就能执行启动/关闭挂机报贝功能, 传送时也会自动取消" Id="00cea413-452e-45f9-9bc4-2a4e20aa4a70" RegularExpression="">
+                  <Trigger Enabled="true" Name="3. 按一次开关宏就能执行启动/关闭挂机报贝功能, 传送时也会自动取消" Id="9a6085dc-aaaa-4061-8ae9-5241c0e65c0f" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="61bec596-b2bd-4ef4-8a89-84483a09bf2d" Name="后台" Enabled="true">
+              <Folder Id="96d14b4c-c222-42d7-9e4b-a595fe784c37" Name="后台" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="关闭挂机模式" Id="a6132005-65f4-4640-bdbe-cbb8bff9baf4" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::挂机报贝(?&lt;autopos&gt;d)? (?&lt;cwl&gt;[1-8]{1})">
+                  <Trigger Enabled="true" Name="关闭挂机模式" Id="5a90d23a-1e5c-435e-a0d9-120a11bd3e2d" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::挂机报贝(?&lt;autopos&gt;d)? (?&lt;cwl&gt;[1-8]{1})">
                     <Actions>
-                      <Action OrderNumber="1" FolderOp="DisableFolder" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="0f9d80fc-75c0-4668-a379-26c52261d9fb" ActionType="Trigger" Asynchronous="False">
+                      <Action OrderNumber="1" FolderOp="DisableFolder" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="97c67980-ea68-4185-a11f-7d772ad76211" ActionType="Trigger" Asynchronous="False">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetString" VariableName="autoflag" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
@@ -949,8 +965,9 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="启动挂机模式" Id="3a8b8a23-29b2-474e-8f75-229ad157b06a" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::挂机报贝(?&lt;autopos&gt;d)? (?&lt;cwl&gt;[1-8]{1})( (?&lt;cwl2&gt;[1-8]{1}))?( (?&lt;cwl3&gt;[1-8]{1}))?">
+                  <Trigger Enabled="true" Name="启动挂机模式" Id="d84d5d63-76f0-4e91-8f13-8a049f666a91" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::挂机报贝(?&lt;autopos&gt;d)? (?&lt;cwl&gt;[1-8]{1})( (?&lt;cwl2&gt;[1-8]{1}))?( (?&lt;cwl3&gt;[1-8]{1}))?">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="autopos" VariableExpression="${autopos}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -974,7 +991,7 @@
                           <ConditionSingle Enabled="true" ExpressionL="${var:cwl2}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="NumericEqual" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="0f9d80fc-75c0-4668-a379-26c52261d9fb" ActionType="Trigger">
+                      <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="97c67980-ea68-4185-a11f-7d772ad76211" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                       <Action OrderNumber="8" VariableOp="SetString" VariableName="autoflag" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
@@ -990,10 +1007,11 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="切图" Id="a29ea9ce-0fdb-4cc3-aaeb-b223558d2fe8" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ActionEffect 15:[0-9A-Z]{8}:(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):05:传送:">
+                  <Trigger Enabled="true" Name="切图" Id="f80af931-9cfa-459b-80f9-568c5ce04868" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ActionEffect 15:[0-9A-Z]{8}:(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):05:传送:">
                     <Actions>
-                      <Action OrderNumber="1" FolderOp="DisableFolder" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="0f9d80fc-75c0-4668-a379-26c52261d9fb" ActionType="Trigger">
+                      <Action OrderNumber="1" FolderOp="DisableFolder" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="97c67980-ea68-4185-a11f-7d772ad76211" ActionType="Trigger">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                       <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="autoflag" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
@@ -1012,12 +1030,13 @@
                         <ConditionSingle Enabled="false" ExpressionL="${area}" ExpressionTypeL="String" ExpressionR="休息区" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       </ConditionGroup>
                     </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="false" Name="自动转发S" Id="0f9d80fc-75c0-4668-a379-26c52261d9fb" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;阿格里帕|护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特||凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁|伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|斯帕蒂卡|阿姆斯特朗|卜福尔|沉思之物|狭缝|俄菲翁尼厄斯):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7,8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+              <Trigger Enabled="false" Name="自动转发S" Id="97c67980-ea68-4185-a11f-7d772ad76211" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(?&lt;monster&gt;阿格里帕|护土精灵|咕尔呱洛斯|伽洛克|火愤牛|南迪|牛头黑神|雷德罗巨蛇|乌尔伽鲁|夺心魔|千竿口花希达|虚无探索者|布隆特斯|巴拉乌尔|努纽努维|蚓螈巨虫|萨法特||凯撒贝希摩斯|极乐鸟|神穆尔鸟|刚德瑞瓦|苍白骑士|卢克洛塔|优昙婆罗花|爬骨怪龙|盐和光|巨大鳐|伽马|兀鲁忽乃朝鲁|伊休妲|顾尼图|阿格拉俄珀|多智兽|得到宽恕的炫学|戾虫|颇胝迦|阿姆斯特朗|布弗鲁|沉思之物|狭缝|俄菲翁尼厄斯):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7,8})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;posx&gt;(?:[^:]*)):(?&lt;posy&gt;(?:[^:]*)):(?&lt;posz&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="map" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1082,70 +1101,82 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:autopos}" ExpressionTypeL="String" ExpressionR="d" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a6132005-65f4-4640-bdbe-cbb8bff9baf4" TriggerText="[00:00:00.000] ChatLog 00:0038::挂机报贝 1" ActionType="Trigger" Asynchronous="False">
+                  <Action OrderNumber="12" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="5a90d23a-1e5c-435e-a0d9-120a11bd3e2d" TriggerText="[00:00:00.000] ChatLog 00:0038::挂机报贝 1" ActionType="Trigger" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="fcd6edc1-b061-41d1-a543-4d9193b33f5e" Name="自动定时 【/e 定时1分钟】 (需鲶鱼精邮差)" Enabled="true">
+          <Folder Id="49c34074-1fce-4352-825f-701b7ddbc4a6" Name="自动定时 【/e 定时1分钟】 (需鲶鱼精邮差)" Enabled="true">
             <Folders>
-              <Folder Id="737a28e7-848f-4aa4-a8e7-73a3f3c0be5d" Name="使用说明" Enabled="true">
+              <Folder Id="2305aad1-874e-4742-92cb-94f1e32231a7" Name="使用说明" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 准备一个定时宏, 请复制此宏 的内容: /e 定时x分钟   " Id="5af8e656-850d-4cf2-a594-5823952b7d1c" RegularExpression="">
+                  <Trigger Enabled="true" Name="1. 准备一个定时宏, 请复制此宏 的内容: /e 定时x分钟   " Id="51836a99-7995-4343-8f91-ffac2358dd73" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="2. 把 x 替换成你要的时长, 如需要3分钟时长的定时, 就把宏改成: /e 定时3分钟" Id="a194a227-0494-4bd5-9fd9-1eff885a1e55" RegularExpression="">
+                  <Trigger Enabled="true" Name="2. 把 x 替换成你要的时长, 如需要3分钟时长的定时, 就把宏改成: /e 定时3分钟" Id="5c1d9077-ca0c-49fc-a048-61eff3ba56e7" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="3. 定时宏内容可以改, 双击定时触发器, 双击最后一个JSON的动作, 自行调整里面的内容, ${var:newString} 为定时ET时间的变量" Id="37ba48a3-4a3c-490f-98d6-6b5b04b15a94" RegularExpression="">
+                  <Trigger Enabled="true" Name="3. 定时宏内容可以改, 双击定时触发器, 双击最后一个JSON的动作, 自行调整里面的内容, ${var:newString} 为定时ET时间的变量" Id="ad0114b9-ea71-4db1-b868-bf91581b4278" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="4. 栗子: /sh ET${var:newString}开 抢开的会被我抓去烤肥肉吃掉" Id="76c2e6ce-648a-4db9-a0c6-b748ecc1c85d" RegularExpression="">
+                  <Trigger Enabled="true" Name="4. 栗子: /sh ET${var:newString}开 抢开的会被我抓去烤肥肉吃掉" Id="6fc293ea-7934-440f-a635-54a0bd2bea0d" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="5. 实际效果: ET11:30开 抢开的会被我抓去烤肥肉吃掉" Id="45408d8d-a340-45d7-9b58-7b62431fcd12" RegularExpression="">
+                  <Trigger Enabled="true" Name="5. 实际效果: ET11:30开 抢开的会被我抓去烤肥肉吃掉" Id="93a0386e-8b6e-4416-b92d-5c5e2b8b5503" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="6. 若中途发生需要重新定时的状况, 按重新定时宏, 重新算出新的ET时间" Id="fdca4276-afcc-498e-adac-8ea646e0c683" RegularExpression="">
+                  <Trigger Enabled="true" Name="6. 若中途发生需要重新定时的状况, 按重新定时宏, 重新算出新的ET时间" Id="286a8c0b-65a0-4f5a-8208-9514137d575d" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="7. 重新定时宏, 请复制此宏: /e 重新定时xx分钟" Id="f84dda1d-b174-4a27-b783-06fd7394b989" RegularExpression="">
+                  <Trigger Enabled="true" Name="7. 重新定时宏, 请复制此宏: /e 重新定时xx分钟" Id="1b0d7a35-8525-40bf-81b1-109a216ee9dc" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="8. 使用详解: 双击我看描述" Id="30610c93-f6ea-4fbd-9320-5521d8c329e8" RegularExpression="" Description="1. 定时宏: 按一次此宏, 就会自动输出自定义分钟后的ET时间&#xD;&#xA;2. 定时宏: 重复按, 再次公布刚定好了的ET时间&#xD;&#xA;3. 重新定时宏: 按一次, 重新计算新的ET时间, 然后自动触发定时宏&#xD;&#xA;4. 若要重复发布刚重新定好的ET时间, 按定时宏就行&#xD;&#xA;5. 定时宏内容可以自己改, ${var:String} 为ET时间的变量, 不能随意替换掉&#xD;&#xA;6. 双击JSON动作, 自行编辑定时宏的内容">
+                  <Trigger Enabled="true" Name="8. 使用详解: 双击我看描述" Id="311a0442-e00f-49c7-8dd1-72bba47568db" RegularExpression="" Description="1. 定时宏: 按一次此宏, 就会自动输出自定义分钟后的ET时间&#xD;&#xA;2. 定时宏: 重复按, 再次公布刚定好了的ET时间&#xD;&#xA;3. 重新定时宏: 按一次, 重新计算新的ET时间, 然后自动触发定时宏&#xD;&#xA;4. 若要重复发布刚重新定好的ET时间, 按定时宏就行&#xD;&#xA;5. 定时宏内容可以自己改, ${var:String} 为ET时间的变量, 不能随意替换掉&#xD;&#xA;6. 双击JSON动作, 自行编辑定时宏的内容">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="0.5 前言: 嫌复杂就看前5步, 可反复刷, ET时间不变, 不支持重新定时 (6往后有重新定时的说明)" Id="e9bddbb8-c639-4ade-be61-77e270c3f7e6" RegularExpression="">
+                  <Trigger Enabled="true" Name="0.5 前言: 嫌复杂就看前5步, 可反复刷, ET时间不变, 不支持重新定时 (6往后有重新定时的说明)" Id="ba9829ce-2bba-4a19-9b9f-b36fca6ab517" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="一定要开鲶鱼精邮差才能发挥效果!!! 端口 2036" Id="b53d79e0-18d2-4226-8ba0-b855e712ba59" RegularExpression="">
+                  <Trigger Enabled="true" Name="一定要开鲶鱼精邮差才能发挥效果!!! 端口 2036" Id="05b59c46-a046-49c3-8028-9dc76cc64df1" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="9. &lt;new&gt;闷怪期定时，定时宏后面加个闷子，例子：/e 定时1分钟闷" Id="df90671e-c73b-426d-845e-b033da507847" RegularExpression="">
+                  <Trigger Enabled="true" Name="9. &lt;new&gt;闷怪期定时，定时宏后面加个闷子，例子：/e 定时1分钟闷" Id="3e7d7d8b-2a00-4653-97c9-9b8945b7e66f" RegularExpression="">
                     <Actions />
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="false" Name="定时 【/e 定时1分钟】" Id="4dca6a20-6c8e-4716-98b1-de9e11189822" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::定时(?&lt;fenzhong&gt;.*)分钟(?&lt;men&gt;闷)?">
+              <Trigger Enabled="false" Name="定时 【/e 定时1分钟】" Id="15073a0c-5b31-434f-b47b-1ef869a6f19f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::定时(?&lt;fenzhong&gt;.*)分钟(?&lt;men&gt;闷)?">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="newETh|newETm|newETmin|currentETmin" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1192,8 +1223,9 @@
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid)}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="重新定时 【/e 重新定时 0.5分钟】" Id="9dbeaada-3cb1-4c71-9a69-96972d928a9b" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::重新定时(?&lt;retime&gt;.*)分钟">
+              <Trigger Enabled="true" Name="重新定时 【/e 重新定时 0.5分钟】" Id="84f63326-dd32-4690-bc4a-975642b6c070" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0038::重新定时(?&lt;retime&gt;.*)分钟">
                 <Actions>
                   <Action OrderNumber="1" VariableName="fixET" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1201,20 +1233,21 @@
                   <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/sh 请注意，重新定时，重新定时，重新定时！！" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4dca6a20-6c8e-4716-98b1-de9e11189822" TriggerText="[00:00:00.000] ChatLog 00:0038::定时${retime}分钟" ActionType="Trigger" ExecutionDelayExpression="700" Asynchronous="False">
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="15073a0c-5b31-434f-b47b-1ef869a6f19f" TriggerText="[00:00:00.000] ChatLog 00:0038::定时${retime}分钟" ActionType="Trigger" ExecutionDelayExpression="700" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="72eef087-4027-4e2e-8256-34b099da8eeb" Name="Fate监控报贝 (需鲶鱼精邮差) 【/e Fate监控 1】 数字自行替换成跨服贝号" Enabled="true">
+          <Folder Id="b532fdcd-f057-4735-900b-2fb177fa7aa4" Name="Fate监控报贝 (需鲶鱼精邮差) 【/e Fate监控 1】 数字自行替换成跨服贝号" Enabled="true">
             <Folders>
-              <Folder ZoneFilterEnabled="True" Id="a9cb41a6-d95a-4bed-84fa-b17583cf29d7" ZoneFilterRegularExpression="太阳神草原" Name="石板妹妹" Enabled="false">
+              <Folder ZoneFilterEnabled="True" Id="c81c0b8c-81e9-43fd-8307-a82f1309b41f" ZoneFilterRegularExpression="太阳神草原" Name="石板妹妹" Enabled="false">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="石人英雄监测【内置报贝】" Id="f199d230-0dcf-4c74-abfd-c57e0f2721cc" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):格尔该朝鲁:00:41:(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(?:[^:]*)):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)" PrevActions="Interrupt" RefirePeriodExpression="6000*1000">
+                  <Trigger Enabled="true" Name="石人英雄监测【内置报贝】" Id="d63f81aa-79e7-4b12-997d-379dff0dd56d" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):格尔该朝鲁:00:41:(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(?:[^:]*)):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)" PrevActions="Interrupt" RefirePeriodExpression="6000*1000">
                     <Actions>
                       <Action OrderNumber="1" SystemBeepFreqExpression="500" SystemBeepLengthExpression="300" UseTTSTextExpression="FATE.石人英雄.格尔该朝鲁.出现" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="UseTTS" RefireInterrupt="True" RefireRequeue="False">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1227,13 +1260,14 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflagfate}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder ZoneFilterEnabled="True" Id="8b1b8452-9b9d-469f-9e0a-db67dbc3d485" ZoneFilterRegularExpression="北萨纳兰" Name="核心危机" Enabled="false">
+              <Folder ZoneFilterEnabled="True" Id="52a2ddc3-38c4-4184-b308-24104b679b67" ZoneFilterRegularExpression="北萨纳兰" Name="核心危机" Enabled="false">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="核心危机" Id="cde4f95e-3d17-4692-92c7-f71d98c50f0b" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):艾玛吉娜矿山公司的技术工:00:1:(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(?:[^:]*)):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
+                  <Trigger Enabled="true" Name="核心危机" Id="976cc98a-fee4-4d8a-80f0-956ccca7fbdf" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):艾玛吉娜矿山公司的技术工:00:1:(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(?:[^:]*)):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl${var:cwl} 土——土元精！！！快醒醒，出FATE啦！！&lt;pos&gt;是《核心危机》！！！" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1243,13 +1277,14 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflagfate}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder ZoneFilterEnabled="True" Id="b225e979-f866-446a-8644-3eac6883b788" ZoneFilterRegularExpression="龙堡参天高地" Name="龙蛋的纷争" Enabled="false">
+              <Folder ZoneFilterEnabled="True" Id="d82c93b5-1160-4d88-82fc-83eb68ec6a3e" ZoneFilterRegularExpression="龙堡参天高地" Name="龙蛋的纷争" Enabled="false">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="参天骏雕监测【内置报贝】" Id="5c6c020f-71da-4aba-a82f-1c964129d954" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(参天骏雕):00:32:(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(?:[^:]*)):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)" PrevActions="Interrupt" PrevActionsRefire="Deny" Scheduling="FromRefirePeriod" PeriodRefire="Deny" RefirePeriodExpression="1200000">
+                  <Trigger Enabled="true" Name="参天骏雕监测【内置报贝】" Id="34a00289-e69e-4278-9bca-a0d0971e3e55" RegularExpression="(?&lt;timestamp&gt;^.{14}) AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(参天骏雕):00:32:(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(?:[^:]*)):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:)" PrevActions="Interrupt" PrevActionsRefire="Deny" Scheduling="FromRefirePeriod" PeriodRefire="Deny" RefirePeriodExpression="1200000">
                     <Actions>
                       <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/cwl${var:cwl} 【冬眠ing】龙蛋FATE刷新啦，来个可爱的帅哥哥/小妹妹来打一下！万分感谢！" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1262,13 +1297,14 @@
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflagfate}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="021f97a8-1594-4c0f-9549-0a861ea56014" Name="后台" Enabled="true">
+              <Folder Id="7c312731-6389-4ddd-9fc1-df25d7fd475f" Name="后台" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="关闭Fate监控" Id="913d3b0e-2497-42b1-b63d-cb68aec7fb4c" RegularExpression="(?&lt;timestamp&gt;^.{14}) ((ChatLog 00:0038::Fate监控 (?&lt;cwl&gt;[1-8]{1}))|(AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(蚓螈巨虫|神穆尔鸟|兀鲁忽乃朝鲁):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:))|(ChatLog 00:0039::进入了休息区。))">
+                  <Trigger Enabled="true" Name="关闭Fate监控" Id="69c40b6d-9751-4d93-8333-639ee05a8d36" RegularExpression="(?&lt;timestamp&gt;^.{14}) ((ChatLog 00:0038::Fate监控 (?&lt;cwl&gt;[1-8]{1}))|(AddCombatant (?&lt;type&gt;03):(?&lt;id&gt;(?:[^:]*)):(蚓螈巨虫|神穆尔鸟|兀鲁忽乃朝鲁):(?&lt;job&gt;(?:[^:]*)):(?&lt;level&gt;(?:[^:]*)):(?&lt;ownerId&gt;(?:[^:]*)):(?&lt;worldId&gt;(?:[^:]*)):(?&lt;world&gt;(?:[^:]*)):(?&lt;npcNameId&gt;(?:[^:]*)):(?&lt;npcBaseId&gt;(?:[^:]*)):(?&lt;currentHp&gt;(?:[^:]*)):(?&lt;hp&gt;(\d{7})):(?&lt;currentMp&gt;(?:[^:]*)):(?&lt;mp&gt;(?:[^:]*))(?::[^:]*){2}:(?&lt;x&gt;(?:[^:]*)):(?&lt;y&gt;(?:[^:]*)):(?&lt;z&gt;(?:[^:]*)):(?&lt;heading&gt;(?:[^:]*))(?:$|:))|(ChatLog 00:0039::进入了休息区。))">
                     <Actions>
                       <Action OrderNumber="1" TextAuraEffect="Bold" TextAuraFontSize="18" TextAuraForeground="Red" TextAuraName="autoflagfatetxt" TextAuraExpression="已关闭Fate监控" TextAuraXIniExpression="${pvar:screenX}" TextAuraYIniExpression="${pvar:screenY}" TextAuraWIniExpression="204" TextAuraHIniExpression="47" TextAuraOIniExpression="100" TextAuraTTLTickExpression="1500-${_sincems}" TextAuraFontName="Microsoft YaHei UI" TriggerId="c2c54293-7039-45ac-bb28-2f6626c7fc18" TriggerText="Souma_Subtitle:开:3:0:0:main" ActionType="TextAura" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
@@ -1282,13 +1318,13 @@
                           <ConditionSingle Enabled="true" ExpressionL="${var:autoflag}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
                       </Action>
-                      <Action OrderNumber="3" FolderOp="DisableFolder" FolderId="8b1b8452-9b9d-469f-9e0a-db67dbc3d485" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
+                      <Action OrderNumber="3" FolderOp="DisableFolder" FolderId="52a2ddc3-38c4-4184-b308-24104b679b67" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" FolderOp="DisableFolder" FolderId="a9cb41a6-d95a-4bed-84fa-b17583cf29d7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
+                      <Action OrderNumber="4" FolderOp="DisableFolder" FolderId="c81c0b8c-81e9-43fd-8307-a82f1309b41f" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="5" FolderOp="DisableFolder" FolderId="b225e979-f866-446a-8644-3eac6883b788" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
+                      <Action OrderNumber="5" FolderOp="DisableFolder" FolderId="d82c93b5-1160-4d88-82fc-83eb68ec6a3e" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
@@ -1296,19 +1332,20 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflagfate}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflagfate}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="启动Fate监控" Id="3f841e36-0723-4ea4-90d9-18778c0893bf" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::Fate监控 (?&lt;cwl&gt;[1-8]{1})">
+                  <Trigger Enabled="true" Name="启动Fate监控" Id="06c990a0-4b19-4fed-be6c-5e68c7cd47e7" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::Fate监控 (?&lt;cwl&gt;[1-8]{1})">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="cwl" VariableExpression="${cwl}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="2" FolderId="b225e979-f866-446a-8644-3eac6883b788" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
+                      <Action OrderNumber="2" FolderId="d82c93b5-1160-4d88-82fc-83eb68ec6a3e" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="3" FolderId="a9cb41a6-d95a-4bed-84fa-b17583cf29d7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
+                      <Action OrderNumber="3" FolderId="c81c0b8c-81e9-43fd-8307-a82f1309b41f" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
-                      <Action OrderNumber="4" FolderId="8b1b8452-9b9d-469f-9e0a-db67dbc3d485" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
+                      <Action OrderNumber="4" FolderId="52a2ddc3-38c4-4184-b308-24104b679b67" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Folder">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                       <Action OrderNumber="5" VariableOp="SetString" VariableName="autoflagfate" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
@@ -1324,6 +1361,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${var:autoflagfate}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                       <ConditionSingle Enabled="false" ExpressionL="${var:autoflagfate}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringEqualCase" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1333,10 +1371,10 @@
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="94987153-04c5-4139-a0b6-a05ee69eb416" Name="方法 (××××不能关××××)" Enabled="true">
+      <Folder Id="ebbe3344-b072-4db6-89cf-3fd619c7a8d7" Name="方法 (××××不能关××××)" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="感觉到了强大的恶名精英的气息" Id="b069bfc1-fb14-4003-8830-1aa7a35d8509" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0039::感觉到了强大的恶名精英的气息……">
+          <Trigger Enabled="true" Name="感觉到了强大的恶名精英的气息" Id="0dbcc46c-77b5-491b-a1ab-a41ce809a2af" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0039::感觉到了强大的恶名精英的气息……">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetString" VariableName="map1" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1344,24 +1382,24 @@
               <Action OrderNumber="2" VariableName="fixET" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="0b39af41-aad5-4e3a-afc6-a2d591be1fba" ActionType="Trigger" ExecutionDelayExpression="200">
+              <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="2e38c597-492d-4143-b700-a9b053c630d5" ActionType="Trigger" ExecutionDelayExpression="200">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="382ecdf2-1c0e-4cb4-8d0c-eead3fcc4d57" ActionType="Trigger" ExecutionDelayExpression="100">
+              <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="3e99b58e-d5f9-494b-905a-cf7a1eb344f6" ActionType="Trigger" ExecutionDelayExpression="100">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="ettime" VariableExpression="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="1c844086-5ce1-4118-9578-14d03b9722e4" ActionType="Trigger">
+              <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="540825ab-7434-4bfd-80f1-e15aff523a42" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c863d3d5-5794-479f-931f-4ca9f9a4728a" TriggerForce="regexp" ActionType="Trigger">
+              <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0d5a4fef-85d9-42c2-945e-cb34c6f1b93b" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${epvar:port}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="4dca6a20-6c8e-4716-98b1-de9e11189822" ActionType="Trigger">
+              <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="15073a0c-5b31-434f-b47b-1ef869a6f19f" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid)}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
@@ -1374,15 +1412,16 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="进入了休息区" Id="8d55f196-beb7-468d-ac60-bf4dbcc2f78d" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0039::进入了休息区。">
+          <Trigger Enabled="true" Name="进入了休息区" Id="5f9f8dda-ada6-4a98-a259-7594ed207ed8" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0039::进入了休息区。">
             <Actions>
-              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c863d3d5-5794-479f-931f-4ca9f9a4728a" TriggerForce="regexp" ActionType="Trigger">
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0d5a4fef-85d9-42c2-945e-cb34c6f1b93b" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${epvar:port}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a37d1e9c-5b8b-4c5b-863a-39b1fcf559fa" TriggerText="0003:欢迎来到艾欧泽亚！" ActionType="Trigger">
+              <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="664a049a-e1b3-4b82-9f4f-978dd8ecdd8e" TriggerText="0003:欢迎来到艾欧泽亚！" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/instance" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="GenericJson">
@@ -1399,27 +1438,28 @@
               <Action OrderNumber="6" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="countdownAlert" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="1c844086-5ce1-4118-9578-14d03b9722e4" ActionType="Trigger">
+              <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="540825ab-7434-4bfd-80f1-e15aff523a42" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="0b39af41-aad5-4e3a-afc6-a2d591be1fba" ActionType="Trigger">
+              <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="2e38c597-492d-4143-b700-a9b053c630d5" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="382ecdf2-1c0e-4cb4-8d0c-eead3fcc4d57" ActionType="Trigger">
+              <Action OrderNumber="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="3e99b58e-d5f9-494b-905a-cf7a1eb344f6" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="4dca6a20-6c8e-4716-98b1-de9e11189822" ActionType="Trigger">
+              <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="15073a0c-5b31-434f-b47b-1ef869a6f19f" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="93ceb8f7-afb0-422a-9016-77188719234b" ActionType="Trigger">
+              <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="36991d61-b5ad-4dfc-9e55-5b39b7c8ce57" ActionType="Trigger">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${var:map1}" ExpressionTypeL="String" ExpressionR="${_zone}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
             </Condition>
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="当前区服" Id="a37d1e9c-5b8b-4c5b-863a-39b1fcf559fa" RegularExpression="0003::欢迎来到艾欧泽亚！|0039::使用跨界传送移动到了(?&lt;world&gt;(.*))。">
+          <Trigger Enabled="true" Sequential="True" Name="当前区服" Id="664a049a-e1b3-4b82-9f4f-978dd8ecdd8e" RegularExpression="0003::欢迎来到艾欧泽亚！|0039::使用跨界传送移动到了(?&lt;world&gt;(.*))。">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetString" VariableName="map1" VariableExpression="${_zone}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -1469,7 +1509,7 @@
                   <ConditionSingle Enabled="true" ExpressionL="${epvar:screenY}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c863d3d5-5794-479f-931f-4ca9f9a4728a" TriggerForce="regexp" ActionType="Trigger">
+              <Action OrderNumber="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0d5a4fef-85d9-42c2-945e-cb34c6f1b93b" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${epvar:port}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
@@ -1479,16 +1519,18 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="设置鲶鱼精端口" Id="c863d3d5-5794-479f-931f-4ca9f9a4728a" RegularExpression="">
+          <Trigger Enabled="true" Name="设置鲶鱼精端口" Id="0d5a4fef-85d9-42c2-945e-cb34c6f1b93b" RegularExpression="">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="port" VariableExpression="2036" VariablePersist="True" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Sequential="True" Name="装填子弹" Id="5e0324c6-2f9d-4053-b7c9-0e25f793d08d" RegularExpression="">
+          <Trigger Enabled="true" Sequential="True" Name="装填子弹" Id="de501ca0-12f7-4798-b99b-8cc95607cd84" RegularExpression="">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetString" VariableName="world" VariableExpression="紫水栈桥" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                 <Condition Enabled="true" Grouping="Or">
@@ -1535,24 +1577,25 @@
                   <ConditionSingle Enabled="true" ExpressionL="${epvar:screenY}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
-              <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c863d3d5-5794-479f-931f-4ca9f9a4728a" TriggerForce="regexp" ActionType="Trigger">
+              <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="0d5a4fef-85d9-42c2-945e-cb34c6f1b93b" TriggerForce="regexp" ActionType="Trigger">
                 <Condition Enabled="true" Grouping="Or">
                   <ConditionSingle Enabled="true" ExpressionL="${epvar:port}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="a96846ea-f5cf-4755-8435-994277713edf" Name="狩猎警报 (TTS)" Enabled="true">
+      <Folder Id="01232923-f699-4dc8-bd66-ac1033e0073a" Name="狩猎警报 (TTS)" Enabled="true">
         <Folders>
-          <Folder Id="e3299421-eeb4-4030-a0c8-dacaccd96244" Name="狩猎怪报警" Enabled="true">
+          <Folder Id="a2fa5b5b-e4b1-4fe9-9ec1-3895bdaac73f" Name="狩猎怪报警" Enabled="true">
             <Folders>
-              <Folder Id="0d3b376d-868f-4be6-b322-8eedf7831d0d" Name="SS怪" Enabled="true">
+              <Folder Id="063307c1-f1c1-42e9-bb58-2cddaeb9a726" Name="SS怪" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="配下提醒" Id="8cd2b24a-ad6f-4a34-a206-faa19809295b" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0839::特殊恶名精英的手下开始了侦察活动……">
+                  <Trigger Enabled="true" Name="配下提醒" Id="b5752189-0e9f-4230-b44a-e71f3f75c210" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0839::特殊恶名精英的手下开始了侦察活动……">
                     <Actions>
                       <Action OrderNumber="1" UseTTSTextExpression="特殊恶名精英的手下开始了侦察活动" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1562,6 +1605,7 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1571,22 +1615,23 @@
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="4fbddef3-e121-4103-9977-378011bcbb9a" Name="新版计数器 (v1.0)" Enabled="true">
+      <Folder Id="9dbc6787-0553-47eb-b124-3987b2c81e94" Name="新版计数器 (v1.0)" Enabled="true">
         <Folders>
-          <Folder FFXIVJobFilter="65536" ZoneFilterEnabled="True" Id="973cabe1-abf7-46a5-a953-a9f73a0fa569" ZoneFilterRegularExpression="基拉巴尼亚湖区" Name="舍弃道具计数" Enabled="true">
+          <Folder FFXIVJobFilter="65536" ZoneFilterEnabled="True" Id="0711ae4b-368e-4a55-9e72-8c224f97adff" ZoneFilterRegularExpression="基拉巴尼亚湖区" Name="舍弃道具计数" Enabled="true">
             <Folders>
-              <Folder Id="a04781fd-6bee-43d7-895b-db95931e0c31" Name="后台" Enabled="true">
+              <Folder Id="83e0a901-8d72-45c9-b5d5-c7fd31dbbaad" Name="后台" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="显示舍弃数量 【/e 显示计数】" Id="96692bd6-02bf-44b7-a912-c478ecbcc218" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::显示计数$">
+                  <Trigger Enabled="true" Name="显示舍弃数量 【/e 显示计数】" Id="e03cf9a8-89e8-4dfd-afb1-98b8c6683b39" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::显示计数$">
                     <Actions>
                       <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/e 舍弃道具数: ${var:toss}个" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="重置计数 【/e 重置计数】" Id="244fc985-8c56-4424-b06f-629d764abe16" RegularExpression="(?&lt;timestamp&gt;^.{14}) (ChatLog 00:0038:重置计数$)|(ActionEffect 15:[0-9A-Z]{8}:(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):05:传送:)">
+                  <Trigger Enabled="true" Name="重置计数 【/e 重置计数】" Id="75f56384-5e7c-4eeb-b5e7-a2a22cd35eb4" RegularExpression="(?&lt;timestamp&gt;^.{14}) (ChatLog 00:0038:重置计数$)|(ActionEffect 15:[0-9A-Z]{8}:(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+):05:传送:)">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="toss" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1598,12 +1643,13 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${evar:toss}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="舍弃" Id="356a2f69-09ba-4441-a958-3a800c68395f" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0039::舍弃了“[^。]+。" Scheduling="FromLastAction">
+              <Trigger Enabled="true" Name="舍弃" Id="0331161c-89b6-49f5-9ceb-7266127faca0" RegularExpression="^\[\d{2}:\d{2}:\d{2}\.\d{3}\] ChatLog 00:0039::舍弃了“[^。]+。" Scheduling="FromLastAction">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="toss" VariableExpression="${var:toss}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
@@ -1615,23 +1661,25 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="65536" ZoneFilterEnabled="True" Id="2a4eb7ff-3187-481d-aaef-e6cefdb6efc1" ZoneFilterRegularExpression="珂露西亚岛" Name="矮人棉计数" Enabled="true">
+          <Folder FFXIVJobFilterEnabled="True" FFXIVJobFilter="65536" ZoneFilterEnabled="True" Id="d8efaedf-45d6-4b4e-846b-caa54124ba4c" ZoneFilterRegularExpression="珂露西亚岛" Name="矮人棉计数" Enabled="true">
             <Folders>
-              <Folder Id="0a889d35-f780-4ae5-83ba-2bb4acea234e" Name="后台" Enabled="true">
+              <Folder Id="d27d2104-d9f2-4cfe-8609-49fb6dcb4d90" Name="后台" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="显示采集次数 【/e 显示计数】" Id="afebf8af-c82a-4976-bc13-32de955dc988" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::显示计数$">
+                  <Trigger Enabled="true" Name="显示采集次数 【/e 显示计数】" Id="3a7bf077-266e-472d-ae04-921fd147b811" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::显示计数$">
                     <Actions>
                       <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/e 矮人棉: ${var:airenmian}次" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
                         <Condition Enabled="false" Grouping="Or" />
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="重置计数 【/e 重置计数】" Id="ea47ae2a-c142-428e-8680-3330716d62d3" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::重置计数$">
+                  <Trigger Enabled="true" Name="重置计数 【/e 重置计数】" Id="5537150f-abba-4d6e-8001-795f48c43c68" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::重置计数$">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="airenmian" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                         <Condition Enabled="false" Grouping="Or" />
@@ -1641,12 +1689,13 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="采集" Id="ed2d20c5-109f-4e88-8574-ff44cb6d44bd" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0843::(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)获得了“矮人棉?”(×[2-9])?。" Scheduling="FromLastAction">
+              <Trigger Enabled="true" Name="采集" Id="a5409c06-6096-4877-9f5f-ff7f74aca83a" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0843::(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)获得了“矮人棉?”(×[2-9])?。" Scheduling="FromLastAction">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="airenmian" VariableExpression="${var:airenmian}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or" />
@@ -1661,15 +1710,16 @@
                   </ConditionGroup>
                   <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder ZoneFilterEnabled="True" Id="a6c88bdf-6f3b-4b39-8689-b02a967dfcc8" ZoneFilterRegularExpression="^北萨纳兰$|^红玉海$|^基拉巴尼亚边区$|^拉凯提卡大森林$|^魔大陆阿济兹拉$|^萨维奈岛$|^叹息海$" Name="打怪计数器" Enabled="true">
+          <Folder ZoneFilterEnabled="True" Id="f3b3f6e5-7257-44ef-98c6-aa8d6cc1c548" ZoneFilterRegularExpression="^北萨纳兰$|^红玉海$|^基拉巴尼亚边区$|^拉凯提卡大森林$|^魔大陆阿济兹拉$|^萨维奈岛$|^叹息海$" Name="打怪计数器" Enabled="true">
             <Folders>
-              <Folder ZoneFilterEnabled="True" Id="9c213e47-9648-49c6-8bee-ad78db06abeb" ZoneFilterRegularExpression="^叹息海$|^萨维奈岛$" Name="后台" Enabled="true">
+              <Folder ZoneFilterEnabled="True" Id="da661a29-6d60-4df1-bcd2-66385499c7e9" ZoneFilterRegularExpression="^叹息海$|^萨维奈岛$" Name="后台" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Sequential="True" Name="当前地图/线路" Id="3138adb6-ef89-4519-84f0-246e2be7dbaf" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0039::当前所在副本区为“(?&lt;ditu&gt;.*)(?&lt;xian&gt;||)”。">
+                  <Trigger Enabled="true" Sequential="True" Name="当前地图/线路" Id="57bfacd7-8fe5-4d7c-89fa-d8567d505e57" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0039::当前所在副本区为“(?&lt;ditu&gt;.*)(?&lt;xian&gt;||)”。">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="line" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
                         <Condition Enabled="true" Grouping="And">
@@ -1703,12 +1753,13 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
             </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="击杀怪" Id="88ff760a-a431-45ba-8dfd-cf1c1a5022fc" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:(0B|43)3A::(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)将(?&lt;monstername&gt;土元精|破裂的隆卡人偶|破裂的隆卡器皿|破裂的隆卡石蒺藜|无壳观梦螺|观梦螺|美拉西迪亚薇薇尔飞龙|亚拉戈奇美拉|小海德拉|狄亚卡|莱西|金刚尾|毕舍遮|阿输陀花|彷徨之物|叹息之物|思考之物)打倒了。" Scheduling="FromLastAction">
+              <Trigger Enabled="true" Name="击杀怪" Id="14945383-92d2-4b8b-861c-d40d92936749" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:(0B|43)3A::(?&lt;player&gt;[\w\u4E00-\u9FA5\uF900-\uFA2D· ]+)将(?&lt;monstername&gt;土元精|破裂的隆卡人偶|破裂的隆卡器皿|破裂的隆卡石蒺藜|无壳观梦螺|观梦螺|美拉西迪亚薇薇尔飞龙|亚拉戈奇美拉|小海德拉|狄亚卡|莱西|金刚尾|毕舍遮|阿输陀花|彷徨之物|叹息之物|思考之物)打倒了。" Scheduling="FromLastAction">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="earthcrystal" VariableExpression="${var:earthcrystal}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="true" Grouping="And">
@@ -1875,8 +1926,9 @@
                   </ConditionGroup>
                   <ConditionSingle Enabled="false" ExpressionL="${_ffxiventity[${_ffxivplayer}].currentworldid}" ExpressionTypeL="String" ExpressionR="1179" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="重置计数" Id="020497ad-741d-4cfb-a368-81a6306c6b1a" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::重置计数(?&lt;line&gt;1|2|3)?">
+              <Trigger Enabled="true" Name="重置计数" Id="af4632a6-f953-4702-8087-dde4ce64dc90" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::重置计数(?&lt;line&gt;1|2|3)?">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="earthcrystal" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="true" Grouping="Or">
@@ -1965,8 +2017,9 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="显示击杀数量 【/e 显示计数】" Id="125784bf-5c1f-4a7a-a515-9db2de698348" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::显示计数$">
+              <Trigger Enabled="true" Name="显示击杀数量 【/e 显示计数】" Id="7336f3ad-4ec8-43ec-90c9-2ccb69521e0e" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::显示计数$">
                 <Actions>
                   <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/e 土元精: ${var:earthcrystal}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
                     <Condition Enabled="true" Grouping="And">
@@ -2005,25 +2058,27 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="5b05349b-1bde-41db-b568-f4a9747981dd" Name="后台" Enabled="true">
+          <Folder Id="75e61acf-5e6d-4c1b-b190-5624d48d49d2" Name="后台" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="搭档" Id="809dbee4-7e91-4fd4-82c5-64500ec49b6d" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::搭档名：(?&lt;comp&gt;.*)已登录。$">
+              <Trigger Enabled="true" Name="搭档" Id="15bab1f9-8501-4b6a-b5e0-d8d933bf6397" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::搭档名：(?&lt;comp&gt;.*)已登录。$">
                 <Actions>
                   <Action OrderNumber="1" VariableOp="SetString" VariableName="comp" VariableExpression="${comp}" VariablePersist="True" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="true" Name="初始化 （如发现Aura文本提示位置不正确，右键执行一次）" Id="599479dd-b06f-47c3-938d-79be3f7a5633" RegularExpression="">
+          <Trigger Enabled="true" Name="初始化 （如发现Aura文本提示位置不正确，右键执行一次）" Id="22052093-eb2e-44b0-8b78-9258efad70c6" RegularExpression="">
             <Actions>
               <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="screenX" VariableExpression="${_screenwidth}/2-225/2" VariablePersist="True" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
                 <Condition Enabled="false" Grouping="Or" />
@@ -2036,14 +2091,16 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="登录搭档 【/e 登录搭档】" Id="6b354f63-b03a-41f1-9bc6-737a422c27fd" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::登录搭档$">
+          <Trigger Enabled="true" Name="登录搭档 【/e 登录搭档】" Id="d4402e77-3c19-4811-85c1-920b45913804" RegularExpression="(?&lt;timestamp&gt;^.{14}) ChatLog 00:0038::登录搭档$">
             <Actions>
               <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:${pvar:port}/command" JsonPayloadExpression="/e 搭档名：&lt;c&gt;已登录。" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
